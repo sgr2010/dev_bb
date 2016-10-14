@@ -13,10 +13,13 @@
  */
 class AdminController extends Controller{
     //put your code here
+
+   
     
    protected function init(){    
         // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
         // $this->cfg['db']['password'], $this->cfg['db']['database']);        
+        
     }
     /**
      * 
@@ -24,9 +27,21 @@ class AdminController extends Controller{
      * @return type
      */
     public function index($id=null){  
-        
+        $Auth = new AdminloginController();
+
+        if( $Auth->iflogin() != true ){
+            header( 'location: adminlogin/login' );
+            exit;
+        }
+
+                
         return $this->view();
         
+    }
+
+    public function login(){
+
+        return $this->view();
     }
     
     
