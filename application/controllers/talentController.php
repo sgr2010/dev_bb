@@ -43,7 +43,7 @@ class talentController extends Controller {
         $this->view->set('postal',$_POST['postal']);
         $this->view->set('address_ken',$_POST['address_ken']);
         
-         $this->view->set('address_machi',$_POST['address_machi']);
+        $this->view->set('address_machi',$_POST['address_machi']);
         $this->view->set('address_details',$_POST['address_details']);
         $this->view->set('line',$_POST['line']);
         $this->view->set('station',$_POST['gender']);

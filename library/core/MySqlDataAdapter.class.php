@@ -192,8 +192,6 @@ class MySqlDataAdapter
      * @return boolean Result
      */
     public function insert(array $values, $table){
-        
-      //var_dump($values);exit();
                
         if (count($values) < 0)
             return false;

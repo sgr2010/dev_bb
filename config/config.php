@@ -32,11 +32,11 @@ $cfg['site']['version'] = '1.0.0';
 /**
 * System contact e-mails
 */
-$cfg['site']['contacts'] = array('Agent <info@agent-network.com>');
+$cfg['site']['contacts'] = array('Agent <info@index.com>');
 /**
 * System email sender address
 */
-$cfg['site']['email_sender'] = 'WebMaster <info@agent-network.com>';
+$cfg['site']['email_sender'] = 'WebMaster <info@index.com>';
 
 /************************************************************* 
 * Database related settings
@@ -51,7 +51,7 @@ $cfg['db']['password'] = '';
 * The Default selected DB
 */
 //$cfg['db']['database'] = 'fw';
-$cfg['db']['database'] = 'caritore_dev';
+$cfg['db']['database'] = 'deb_bb';
 
 
 
