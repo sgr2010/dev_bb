@@ -1,0 +1,3 @@
+CREATE TABLE `deb_bb`.`bb_admin_user` ( `id` INT NOT NULL AUTO_INCREMENT , `user_name` VARCHAR(64) NOT NULL , `email` VARCHAR(64) NOT NULL , `pwd` VARCHAR(64) NOT NULL , `date_of_regi` DATETIME NOT NULL , `delete_flag` INT NOT NULL DEFAULT '0' , `per` INT NOT NULL DEFAULT '3' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `bb_admin_user` ADD `acc_active` INT NOT NULL DEFAULT '0' AFTER `per`;

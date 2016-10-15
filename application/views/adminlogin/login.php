@@ -61,7 +61,8 @@
                                         <div class="widget-main">
                                             <h4 class="header blue lighter bigger">
                                                 <i class="ace-icon fa fa-coffee green"></i>
-                                                Please Enter Your Information
+                                                <?php if( $msg ) echo $msg; 
+                                                else echo "Please Enter Your Information"; ?>                                                
                                             </h4>
 
                                             <div class="space-6"></div>
@@ -82,7 +83,7 @@
                                                         </span>
                                                     </label>
 
-                                                    <div class="space"></div>
+                                                    <div class="space"></div>                                                    
 
                                                     <div class="clearfix">
                                                         <label class="inline">

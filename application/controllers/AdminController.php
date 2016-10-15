@@ -19,7 +19,11 @@ class AdminController extends Controller{
    protected function init(){    
         // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
         // $this->cfg['db']['password'], $this->cfg['db']['database']);        
-        
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+            $ADMINUSER = $_SESSION['username'];
+        }else{
+            $ADMINUSER = " Guest";
+        }
     }
     /**
      * 

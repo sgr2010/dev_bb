@@ -43,10 +43,18 @@ class AdminloginModel extends Model{
 
         // Database Table name 
         $table ="bb_admin_user";
+       
+        $result = $this->db->query("SELECT * FROM bb_admin_user WHERE user_name = '$user_name' AND pwd = '$password'" );
+        //$result = $this->db->query("SELECT COUNT(id) FROM bb_admin_user WHERE user_name = '$user_name' AND pwd = '$password'" );
+        $raw = mysql_fetch_array($result);
+        if ( $raw['acc_active']  == 0 ) {
+           return 0;
+        }else{
+            return $this->db->numRows($result);    
+        }
+         // var_dump( $raw['acc_active']);
+         // exit();
         
-        $result = $this->db->query("SELECT COUNT(id) FROM bb_admin_user WHERE user_name = '$user_name' AND pwd = '$password'" );
-        return $this->db->numRows($result);
-
     }
 
 
