@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class ArticlesController extends Controller{
+class AdminController extends Controller{
     //put your code here
 
    
@@ -24,13 +24,6 @@ class ArticlesController extends Controller{
         }else{
             $ADMINUSER = " Guest";
         }
-
-        $Auth = new AdminloginController();
-
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
     }
     /**
      * 
@@ -38,13 +31,25 @@ class ArticlesController extends Controller{
      * @return type
      */
     public function index($id=null){  
-               
+        $Auth = new AdminloginController();
+
+        if( $Auth->iflogin() != true ){
+            header( 'location: adminlogin/login' );
+            exit;
+        }
+
+                
         return $this->view();
         
     }
 
-    
+     public function input(){
+        $template = "admin/articles/input";
+        return $this->view( );
+
+    }
+
+
    
-    
     
 }
