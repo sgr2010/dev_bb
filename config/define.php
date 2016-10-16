@@ -18,8 +18,9 @@ if(__DIR__ == '/var/www/html/main/config'){
 
 // for SGR 
 //-- CSS
-define('ASSEST_PATH_ADMIN',	'/mvc-test/public/assets');
+define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
 
+define( 'ADMINUSER', $_SESSION['username']);
 
 
 

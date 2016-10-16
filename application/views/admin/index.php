@@ -41,6 +41,15 @@
         <script src="ace-extra.min.js assets/js/html5shiv.min.js"></script>
         <script src="ace-extra.min.js assets/js/respond.min.js"></script>
         <![endif]-->
+
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('myLogout').onclick = function() {
+                    document.getElementById('logoout').submit();
+                    return false;
+                };
+            };
+        </script>
     </head>
 
     <body class="no-skin">
@@ -327,7 +336,7 @@
                                 <img class="nav-user-photo" src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/user.jpg" alt="Jason's Photo" />
                                 <span class="user-info">
                                     <small>Welcome,</small>
-                                    Jason
+                                    <?php echo ADMINUSER ; ?>
                                 </span>
 
                                 <i class="ace-icon fa fa-caret-down"></i>
@@ -351,7 +360,8 @@
                                 <li class="divider"></li>
 
                                 <li>
-                                    <a href="#">
+                                    <!-- <form id="logoout" action="adminlogin/login" method="POST"> -->
+                                    <a href="#" id="myLogout">
                                         <i class="ace-icon fa fa-power-off"></i>
                                         Logout
                                     </a>
@@ -654,7 +664,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="form-elements.html">
+                                <a href="articles/input">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     New Article Add
                                 </a>
@@ -733,6 +743,92 @@
 
                         <b class="arrow"></b>
                     </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-tag"></i>
+                            <span class="menu-text"> DB Tables  </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="profile.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    User Profile
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="inbox.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Inbox
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="pricing.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Pricing Tables
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="invoice.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Invoice
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="timeline.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Timeline
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="search.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Search Results
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="email.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Email Templates
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="login.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Login &amp; Register
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+
 
                     <li class="">
                         <a href="#" class="dropdown-toggle">
@@ -2116,8 +2212,8 @@
                 <div class="footer-inner">
                     <div class="footer-content">
                         <span class="bigger-120">
-                            <span class="blue bolder">Ace</span>
-                            Application &copy; 2013-2014
+                            <span class="blue bolder">SGR </span>
+                            Application &copy; 2016-2017
                         </span>
 
                         &nbsp; &nbsp;
@@ -2142,7 +2238,10 @@
                 <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
             </a>
         </div><!-- /.main-container -->
-
+         <!-- logout Form -->
+        <form id="logoout" action="/dev_bb/adminlogin/logout" method="POST" >
+            <input type="hidden" name="mode" value="logout" />
+        </form>
         <!-- basic scripts -->
 
         <!--[if !IE]> -->
