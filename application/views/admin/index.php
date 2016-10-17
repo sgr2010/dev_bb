@@ -664,7 +664,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="articles/input">
+                                <a href="/dev_bb/articles/input">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     New Article Add
                                 </a>
