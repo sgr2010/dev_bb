@@ -20,7 +20,11 @@ if(__DIR__ == '/var/www/html/main/config'){
 //-- CSS
 define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
 
-define( 'ADMINUSER', $_SESSION['username']);
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+	define( 'ADMINUSER', $_SESSION['username']);
+}else{
+	define( 'ADMINUSER', "Guest");
+}
 
 
 

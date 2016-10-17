@@ -51,326 +51,10 @@
     </head>
 
     <body class="no-skin">
-        <div id="navbar" class="navbar navbar-default          ace-save-state">
-            <div class="navbar-container ace-save-state" id="navbar-container">
-                <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-                    <span class="sr-only">Toggle sidebar</span>
-
-                    <span class="icon-bar"></span>
-
-                    <span class="icon-bar"></span>
-
-                    <span class="icon-bar"></span>
-                </button>
-
-                <div class="navbar-header pull-left">
-                    <a href="index.html" class="navbar-brand">
-                        <small>
-                            <i class="fa fa-leaf"></i>
-                            Ace Admin
-                        </small>
-                    </a>
-                </div>
-
-                <div class="navbar-buttons navbar-header pull-right" role="navigation">
-                    <ul class="nav ace-nav">
-                        <li class="grey dropdown-modal">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <i class="ace-icon fa fa-tasks"></i>
-                                <span class="badge badge-grey">4</span>
-                            </a>
-
-                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-                                <li class="dropdown-header">
-                                    <i class="ace-icon fa fa-check"></i>
-                                    4 Tasks to complete
-                                </li>
-
-                                <li class="dropdown-content">
-                                    <ul class="dropdown-menu dropdown-navbar">
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">Software Update</span>
-                                                    <span class="pull-right">65%</span>
-                                                </div>
-
-                                                <div class="progress progress-mini">
-                                                    <div style="width:65%" class="progress-bar"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">Hardware Upgrade</span>
-                                                    <span class="pull-right">35%</span>
-                                                </div>
-
-                                                <div class="progress progress-mini">
-                                                    <div style="width:35%" class="progress-bar progress-bar-danger"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">Unit Testing</span>
-                                                    <span class="pull-right">15%</span>
-                                                </div>
-
-                                                <div class="progress progress-mini">
-                                                    <div style="width:15%" class="progress-bar progress-bar-warning"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">Bug Fixes</span>
-                                                    <span class="pull-right">90%</span>
-                                                </div>
-
-                                                <div class="progress progress-mini progress-striped active">
-                                                    <div style="width:90%" class="progress-bar progress-bar-success"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-footer">
-                                    <a href="#">
-                                        See tasks with details
-                                        <i class="ace-icon fa fa-arrow-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="purple dropdown-modal">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <i class="ace-icon fa fa-bell icon-animated-bell"></i>
-                                <span class="badge badge-important">8</span>
-                            </a>
-
-                            <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-                                <li class="dropdown-header">
-                                    <i class="ace-icon fa fa-exclamation-triangle"></i>
-                                    8 Notifications
-                                </li>
-
-                                <li class="dropdown-content">
-                                    <ul class="dropdown-menu dropdown-navbar navbar-pink">
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-                                                        New Comments
-                                                    </span>
-                                                    <span class="pull-right badge badge-info">+12</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <i class="btn btn-xs btn-primary fa fa-user"></i>
-                                                Bob just signed up as an editor ...
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-                                                        New Orders
-                                                    </span>
-                                                    <span class="pull-right badge badge-success">+8</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <div class="clearfix">
-                                                    <span class="pull-left">
-                                                        <i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-                                                        Followers
-                                                    </span>
-                                                    <span class="pull-right badge badge-info">+11</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-footer">
-                                    <a href="#">
-                                        See all notifications
-                                        <i class="ace-icon fa fa-arrow-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="green dropdown-modal">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-                                <span class="badge badge-success">5</span>
-                            </a>
-
-                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-                                <li class="dropdown-header">
-                                    <i class="ace-icon fa fa-envelope-o"></i>
-                                    5 Messages
-                                </li>
-
-                                <li class="dropdown-content">
-                                    <ul class="dropdown-menu dropdown-navbar">
-                                        <li>
-                                            <a href="#" class="clearfix">
-                                                <img src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-                                                <span class="msg-body">
-                                                    <span class="msg-title">
-                                                        <span class="blue">Alex:</span>
-                                                        Ciao sociis natoque penatibus et auctor ...
-                                                    </span>
-
-                                                    <span class="msg-time">
-                                                        <i class="ace-icon fa fa-clock-o"></i>
-                                                        <span>a moment ago</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="clearfix">
-                                                <img src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-                                                <span class="msg-body">
-                                                    <span class="msg-title">
-                                                        <span class="blue">Susan:</span>
-                                                        Vestibulum id ligula porta felis euismod ...
-                                                    </span>
-
-                                                    <span class="msg-time">
-                                                        <i class="ace-icon fa fa-clock-o"></i>
-                                                        <span>20 minutes ago</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="clearfix">
-                                                <img src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-                                                <span class="msg-body">
-                                                    <span class="msg-title">
-                                                        <span class="blue">Bob:</span>
-                                                        Nullam quis risus eget urna mollis ornare ...
-                                                    </span>
-
-                                                    <span class="msg-time">
-                                                        <i class="ace-icon fa fa-clock-o"></i>
-                                                        <span>3:15 pm</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="clearfix">
-                                                <img src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-                                                <span class="msg-body">
-                                                    <span class="msg-title">
-                                                        <span class="blue">Kate:</span>
-                                                        Ciao sociis natoque eget urna mollis ornare ...
-                                                    </span>
-
-                                                    <span class="msg-time">
-                                                        <i class="ace-icon fa fa-clock-o"></i>
-                                                        <span>1:33 pm</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="clearfix">
-                                                <img src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-                                                <span class="msg-body">
-                                                    <span class="msg-title">
-                                                        <span class="blue">Fred:</span>
-                                                        Vestibulum id penatibus et auctor  ...
-                                                    </span>
-
-                                                    <span class="msg-time">
-                                                        <i class="ace-icon fa fa-clock-o"></i>
-                                                        <span>10:09 am</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-footer">
-                                    <a href="inbox.html">
-                                        See all messages
-                                        <i class="ace-icon fa fa-arrow-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="light-blue dropdown-modal">
-                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                <img class="nav-user-photo" src="<?php echo ASSEST_PATH_ADMIN; ?>/images/avatars/user.jpg" alt="Jason's Photo" />
-                                <span class="user-info">
-                                    <small>Welcome,</small>
-                                    <?php echo ADMINUSER ; ?>
-                                </span>
-
-                                <i class="ace-icon fa fa-caret-down"></i>
-                            </a>
-
-                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                                <li>
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-cog"></i>
-                                        Settings
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="profile.html">
-                                        <i class="ace-icon fa fa-user"></i>
-                                        Profile
-                                    </a>
-                                </li>
-
-                                <li class="divider"></li>
-
-                                <li>
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-power-off"></i>
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- /.navbar-container -->
-        </div>
-
-        <div class="main-container ace-save-state" id="main-container">
+    <?php 
+        include(MyHelpers::UrlContent('~/views/shared/header.php'));
+    ?>
+    <div class="main-container ace-save-state" id="main-container">
             <script type="text/javascript">
                 try{ace.settings.loadState('main-container')}catch(e){}
             </script>
@@ -1001,9 +685,8 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <!-- PAGE CONTENT BEGINS -->
-                                <form class="form-horizontal" role="form" name="frm_article" >
-                                    
-                                    <div class="form-group">
+                                <form class="form-horizontal" role="form" name="frm_article" method="POST" action="input" >
+                                  <div class="form-group">
                                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
                                         <div class="col-sm-9">
                                             <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" />
@@ -1016,7 +699,7 @@
                                         <label class="col-sm-3 control-label no-padding-right" for="form-field-tags">Tag input</label>
                                         <div class="col-sm-9">
                                             <div class="inline">
-                                                <input type="text" name="tags" id="form-field-tags" value="Tag Input Control" placeholder="Enter tags ..." />
+                                                <input type="text" name="article_tage" id="form-field-tags" value="" placeholder="Enter tags ..." />
                                             </div>
                                         </div>  
                                     </div> 
@@ -1027,13 +710,13 @@
                                         <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Type</label>
                                         <div class="col-sm-9">
                                             <div class="inline">
-                                                <select class="chosen-select form-control" id="form-field-select-3" data-placeholder="Choose a Article Type...">                                                            
+                                                <select class="chosen-select form-control" name="article_type" id="form-field-select-3" data-placeholder="Choose a Article Type...">
                                                     <option value="TX">Texas</option>
                                                     <option value="UT">Utah</option>
                                                     <option value="VT">Vermont</option>
                                                     <option value="VA">Virginia</option>
                                                     <option value="WA">Washington</option>
-                                                    <option value="WV">West Virginiaffffffffffffffffffffffffffff</option>
+                                                    <option value="WVfffff">West Virginiaffffffffffffffffffffffffffff</option>
                                                     <option value="WI">Wisconsin</option>
                                                     <option value="WY">Wyoming</option>
                                                 </select>
@@ -1042,12 +725,12 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Type</label>
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content</label>
                                         <div class="col-sm-9">
                                                                                                      
                                                 <div class="widget-box widget-color-blue">                                
                                                     <div class="widget-main no-padding">
-                                                        <textarea name="content" data-provide="markdown" data-iconlibrary="fa" rows="20">
+                                                        <textarea name="article_contects" data-provide="markdown" data-iconlibrary="fa" rows="20">
                                                         </textarea>
                                                     </div>                                                
                                                 </div>
@@ -1056,135 +739,13 @@
                                     </div>                                  
                                     <div class="clearfix form-actions">
                                         <div class="col-md-offset-3 col-md-9">
-                                            <button class="btn btn-info" type="button">
+                                            <button class="btn btn-info" type="Submit">
                                                 <i class="ace-icon fa fa-check bigger-110"></i>Submit</button>&nbsp; &nbsp; &nbsp;
                                             <button class="btn" type="reset">
                                                 <i class="ace-icon fa fa-undo bigger-110"></i>Reset</button>
                                         </div>
                                     </div>
-
-                                    <div class="hr hr-24"></div>
-
-                                    
-                                    <div class="space-24"></div>
-
-                                   
-                                <div id="modal-form" class="modal" tabindex="-1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="blue bigger">Please fill the following form fields</h4>
-                                            </div>
-
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <div class="space"></div>
-
-                                                        <input type="file" />
-                                                    </div>
-
-                                                    <div class="col-xs-12 col-sm-7">
-                                                        <div class="form-group">
-                                                            <label for="form-field-select-3">Location</label>
-
-                                                            <div>
-                                                                <select class="chosen-select" data-placeholder="Choose a Country...">
-                                                                    <option value="">&nbsp;</option>
-                                                                    <option value="AL">Alabama</option>
-                                                                    <option value="AK">Alaska</option>
-                                                                    <option value="AZ">Arizona</option>
-                                                                    <option value="AR">Arkansas</option>
-                                                                    <option value="CA">California</option>
-                                                                    <option value="CO">Colorado</option>
-                                                                    <option value="CT">Connecticut</option>
-                                                                    <option value="DE">Delaware</option>
-                                                                    <option value="FL">Florida</option>
-                                                                    <option value="GA">Georgia</option>
-                                                                    <option value="HI">Hawaii</option>
-                                                                    <option value="ID">Idaho</option>
-                                                                    <option value="IL">Illinois</option>
-                                                                    <option value="IN">Indiana</option>
-                                                                    <option value="IA">Iowa</option>
-                                                                    <option value="KS">Kansas</option>
-                                                                    <option value="KY">Kentucky</option>
-                                                                    <option value="LA">Louisiana</option>
-                                                                    <option value="ME">Maine</option>
-                                                                    <option value="MD">Maryland</option>
-                                                                    <option value="MA">Massachusetts</option>
-                                                                    <option value="MI">Michigan</option>
-                                                                    <option value="MN">Minnesota</option>
-                                                                    <option value="MS">Mississippi</option>
-                                                                    <option value="MO">Missouri</option>
-                                                                    <option value="MT">Montana</option>
-                                                                    <option value="NE">Nebraska</option>
-                                                                    <option value="NV">Nevada</option>
-                                                                    <option value="NH">New Hampshire</option>
-                                                                    <option value="NJ">New Jersey</option>
-                                                                    <option value="NM">New Mexico</option>
-                                                                    <option value="NY">New York</option>
-                                                                    <option value="NC">North Carolina</option>
-                                                                    <option value="ND">North Dakota</option>
-                                                                    <option value="OH">Ohio</option>
-                                                                    <option value="OK">Oklahoma</option>
-                                                                    <option value="OR">Oregon</option>
-                                                                    <option value="PA">Pennsylvania</option>
-                                                                    <option value="RI">Rhode Island</option>
-                                                                    <option value="SC">South Carolina</option>
-                                                                    <option value="SD">South Dakota</option>
-                                                                    <option value="TN">Tennessee</option>
-                                                                    <option value="TX">Texas</option>
-                                                                    <option value="UT">Utah</option>
-                                                                    <option value="VT">Vermont</option>
-                                                                    <option value="VA">Virginia</option>
-                                                                    <option value="WA">Washington</option>
-                                                                    <option value="WV">West Virginia</option>
-                                                                    <option value="WI">Wisconsin</option>
-                                                                    <option value="WY">Wyoming</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-username">Username</label>
-
-                                                            <div>
-                                                                <input type="text" id="form-field-username" placeholder="Username" value="alexdoe" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="space-4"></div>
-
-                                                        <div class="form-group">
-                                                            <label for="form-field-first">Name</label>
-
-                                                            <div>
-                                                                <input type="text" id="form-field-first" placeholder="First Name" value="Alex" />
-                                                                <input type="text" id="form-field-last" placeholder="Last Name" value="Doe" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button class="btn btn-sm" data-dismiss="modal">
-                                                    <i class="ace-icon fa fa-times"></i>
-                                                    Cancel
-                                                </button>
-
-                                                <button class="btn btn-sm btn-primary">
-                                                    <i class="ace-icon fa fa-check"></i>
-                                                    Save
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- PAGE CONTENT ENDS -->
-                            </div><!-- /.col -->
+                                    </form>
                         </div><!-- /.row -->
                     </div><!-- /.page-content -->
                 </div>

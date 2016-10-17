@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class AdminController extends Controller{
+class ArticlesController extends Controller{
     //put your code here
 
    
@@ -43,7 +43,13 @@ class AdminController extends Controller{
         
     }
 
-     public function input(){
+     public function input( $request = Null ){
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            var_dump($_POST); exit();
+        }
+
+        
+
         $template = "admin/articles/input";
         return $this->view( );
 
