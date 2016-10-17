@@ -37,7 +37,6 @@ class AdminloginController extends Controller{
         }
 
         if( $mode == "new" ){
-            var_dump( $_POST );
             $this->view->set('email',$_POST['email']);
             $this->view->set('adminname',$_POST['user_name']);
             $this->view->set('password',$_POST['pwd']);

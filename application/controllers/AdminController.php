@@ -13,8 +13,6 @@
  */
 class ArticlesController extends Controller{
     //put your code here
-
-   
     
    protected function init(){    
         // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
