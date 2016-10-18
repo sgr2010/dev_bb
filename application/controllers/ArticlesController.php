@@ -13,6 +13,8 @@
  */
 class ArticlesController extends Controller{
     //put your code here
+
+   
     
    protected function init(){    
         // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
@@ -22,13 +24,6 @@ class ArticlesController extends Controller{
         }else{
             $ADMINUSER = " Guest";
         }
-
-        $Auth = new AdminloginController();
-
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
     }
     /**
      * 
@@ -36,13 +31,31 @@ class ArticlesController extends Controller{
      * @return type
      */
     public function index($id=null){  
-               
+        $Auth = new AdminloginController();
+
+        if( $Auth->iflogin() != true ){
+            header( 'location: adminlogin/login' );
+            exit;
+        }
+
+                
         return $this->view();
         
     }
 
-    
+     public function input( $request = Null ){
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            var_dump($_POST); exit();
+        }
+
+        
+
+        $template = "admin/articles/input";
+        return $this->view( );
+
+    }
+
+
    
-    
     
 }
