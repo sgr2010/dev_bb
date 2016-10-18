@@ -57,35 +57,35 @@
         include(MyHelpers::UrlContent('~/views/shared/menu_left.php'));
     ?>
 
+    
+
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-                    <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+        <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
     </div>
+    </div>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Forms</a>
+                    </li>
+                    <li class="active">New Article</li>
+                </ul><!-- /.breadcrumb -->
+
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                    </form>
+                </div><!-- /.nav-search -->
             </div>
-
-            <div class="main-content">
-                <div class="main-content-inner">
-                    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
-                        <ul class="breadcrumb">
-                            <li>
-                                <i class="ace-icon fa fa-home home-icon"></i>
-                                <a href="#">Home</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Forms</a>
-                            </li>
-                            <li class="active">New Article</li>
-                        </ul><!-- /.breadcrumb -->
-
-                        <div class="nav-search" id="nav-search">
-                            <form class="form-search">
-                                <span class="input-icon">
-                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                                </span>
-                            </form>
-                        </div><!-- /.nav-search -->
-                    </div>
 
                     <div class="page-content">
                         <div class="ace-settings-container" id="ace-settings-container">
@@ -168,67 +168,13 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <!-- PAGE CONTENT BEGINS -->
-                                <form class="form-horizontal" role="form" name="frm_article" method="POST" action="input" >
-                                  <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
-                                        <div class="col-sm-9">
-                                            <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" />
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="space-4"></div>
+                                <!-- table list here --> 
 
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-tags">Tag input</label>
-                                        <div class="col-sm-9">
-                                            <div class="inline">
-                                                <input type="text" name="article_tage" id="form-field-tags" value="" placeholder="Enter tags ..." />
-                                            </div>
-                                        </div>  
-                                    </div> 
-                                   
-                                    <div class="space-4"></div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Type</label>
-                                        <div class="col-sm-9">
-                                       
-                                                <select class="chosen-select form-control" name="article_type" id="form-field-select-3" data-placeholder="Choose a Article Type...">
-                                                <option value=""></option>
-                                                <?php
-                                                foreach ($articleTypes as $key => $types) {
-                                                    echo "<option value=". $types['id'] .">".$types['article_type_title']."</option>";
-                                                }
-                                                ?>                                                   
-                                                </select>
-                                     
-                                        </div>  
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content</label>
-                                        <div class="col-sm-9">
-                                                                                                     
-                                                <div class="widget-box widget-color-blue">                                
-                                                    <div class="widget-main no-padding">
-                                                        <textarea name="article_contects" data-provide="markdown" data-iconlibrary="fa" rows="20">
-                                                        </textarea>
-                                                    </div>                                                
-                                                </div>
-                                           
-                                        </div>  
-                                    </div>                                  
-                                    <div class="clearfix form-actions">
-                                        <div class="col-md-offset-3 col-md-9">
-                                            <button class="btn btn-info" type="Submit">
-                                                <i class="ace-icon fa fa-check bigger-110"></i>Submit</button>&nbsp; &nbsp; &nbsp;
-                                            <button class="btn" type="reset">
-                                                <i class="ace-icon fa fa-undo bigger-110"></i>Reset</button>
-                                        </div>
-                                    </div>
-                                    </form>
+                                <!-- table list end here --> 
                         </div><!-- /.row -->
                     </div><!-- /.page-content -->
+
+
                 </div>
             </div><!-- /.main-content -->
 

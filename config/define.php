@@ -20,6 +20,10 @@ if(__DIR__ == '/var/www/html/main/config'){
 //-- CSS
 define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
 
+// Home menu Rrl set
+define('HOME_URL',	'/dev_bb/admin/index');
+
+
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 	define( 'ADMINUSER', $_SESSION['username']);
 }else{
