@@ -7,7 +7,7 @@
         <li <?php if( $menu_sub == null ) ?>    class = "active"; >
             <?php if( $menu_sub != null ) { ?> <a href="#"><?php echo $menu; ?></a>
             <?php 
-            }else{ echo $menu; }   ?>
+            }else{ echo "$menu"; }   ?>
         </li>
         <?php
             if( $menu_sub != null ){ ?>      

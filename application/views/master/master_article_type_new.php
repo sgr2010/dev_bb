@@ -65,27 +65,11 @@
     </div>
     <div class="main-content">
         <div class="main-content-inner">
-            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
-                <ul class="breadcrumb">
-                    <li>
-                        <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Forms</a>
-                    </li>
-                    <li class="active">New Article</li>
-                </ul><!-- /.breadcrumb -->
-
-                <div class="nav-search" id="nav-search">
-                    <form class="form-search">
-                        <span class="input-icon">
-                            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                            <i class="ace-icon fa fa-search nav-search-icon"></i>
-                        </span>
-                    </form>
-                </div><!-- /.nav-search -->
-            </div>
+             <!-- nav manu statrt here -->
+            <?php 
+                include(MyHelpers::UrlContent('~/views/shared/nav_menu_title_bar.php'));
+            ?>
+        <!-- nav manu end here -->
 
                     <div class="page-content">
                         <div class="ace-settings-container" id="ace-settings-container">
@@ -155,22 +139,21 @@
                             </div><!-- /.ace-settings-box -->
                         </div><!-- /.ace-settings-container -->
 
-                        <div class="page-header">
-                            <h1>
-                                New Article Submit Form
-                                <small>
-                                    <i class="ace-icon fa fa-angle-double-right"></i>
-                                    Input A New Article Data
-                                </small>
-                            </h1>
-                        </div><!-- /.page-header -->
+                        <!-- /.page-header start -->
+                        <?php 
+                            include(MyHelpers::UrlContent('~/views/shared/page_header.php'));
+                        ?>
+                        <!-- /.page-header end -->
 
                         <div class="row">
                             <div class="col-xs-12">
                                 <!-- PAGE CONTENT BEGINS -->
-                                <!-- table list here --> 
+                                <!-- Form list here --> 
+                            <?php 
+                                include(MyHelpers::UrlContent('~/views/bb_forms/article_type_new_add_frm.php'));
+                            ?>
 
-                                <!-- table list end here --> 
+                                <!-- Form list end here --> 
                         </div><!-- /.row -->
                     </div><!-- /.page-content -->
 
