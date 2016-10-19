@@ -181,7 +181,39 @@
                                         </thead>
                                         <tbody>  
                                             <?php 
-                                                foreach ($articleTypes as $key => $value) {
+                                            if( $articleTypes == false ){
+                                            ?>
+                                            <tr>
+                                                <td class="center">
+                                                    <label class="pos-rel">
+                                                    <input type="checkbox" class="ace" />
+                                                        <span class="lbl"></span>
+                                                    </label>
+                                                </td>   
+                                                <td> No record </td>
+                                                <td> No record</td>
+                                                <td> No record </td>
+                                                <td> No record</td>
+                                                <td>No record</td>
+                                                <td>
+                                                    <div class="hidden-sm hidden-xs action-buttons">
+                                                        <a class="blue" href="#">
+                                                            <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                        </a>
+                                                        <a class="green" href="#">
+                                                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                        </a>
+                                                        <a class="red" href="#">
+                                                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                        </a>
+                                                    </div>                                                    
+                                                </td>
+                                            </tr>
+                                            
+                                            <?php 
+                                            }else{
+                                                foreach ($articleTypes as $key => $value) {                                            
+                                          
                                             ?>
                                             <tr>
                                                 <td class="center">
@@ -200,7 +232,7 @@
                                                 <td>
                                                     <span class="label label-sm label-inverse arrowed-in">Flagged</span>
                                                 </td>
-                                                <td><?php echo $value['date_of_add'] ?></td>
+                                                <td><?php echo $value['date_of_regi'] ?></td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs action-buttons">
                                                         <a class="blue" href="#">
@@ -218,6 +250,8 @@
                                             </tr>
                                             <?php
                                             }
+                                        }
+                                        
                                         ?> 
                                         </tbody>
                                     </table>
