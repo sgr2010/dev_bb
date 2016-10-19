@@ -27,14 +27,7 @@ class ArticlesModel extends Model{
         return $result;
     }
     
-    public function get_articles_type_all(){
-
-        $table = "bb_articles_type";
-        $field = "*";
-        $where = "";
-        $result = $this->db->select( $field, $table, $where);
-        return $result;
-    }
+    
 
    
 
