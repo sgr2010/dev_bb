@@ -332,19 +332,6 @@
 
 
 
-         <!--[if !IE]> -->
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
-
-        <!-- <![endif]-->
-
-        <!--[if IE]>
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
-<![endif]-->
-        <script type="text/javascript">
-            if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-        </script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
-
         <!-- page specific plugin scripts -->
 
         <!--[if lte IE 8]>
@@ -360,7 +347,6 @@
 
         <!-- ace scripts -->
         <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace-elements.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
 
 
 

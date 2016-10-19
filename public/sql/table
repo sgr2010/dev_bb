@@ -13,3 +13,11 @@ CREATE TABLE `deb_bb`.`bb_admin_user` (
 	`acc_active` INT NOT NULL DEFAULT '0', 
 	PRIMARY KEY (`id`)
 	) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_articles_type` ( 
+`id` INT NOT NULL AUTO_INCREMENT , 
+`article_type_title` VARCHAR(56) NOT NULL , 
+`type_describe` VARCHAR(56) NOT NULL , 
+`delete_flag` INT NOT NULL , 
+PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
