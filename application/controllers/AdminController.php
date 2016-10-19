@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class ArticlesController extends Controller{
+class AdminController extends Controller{
     //put your code here
     
    protected function init(){    
@@ -36,6 +36,15 @@ class ArticlesController extends Controller{
      * @return type
      */
     public function index($id=null){  
+        $menu = "Dashboard";
+        $menu_sub = null;
+        $page_header_sub_title = "Home";
+        $page_header_title = "Dashboard";
+
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
                
         return $this->view();
         
