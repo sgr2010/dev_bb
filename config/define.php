@@ -20,6 +20,9 @@ if(__DIR__ == '/var/www/html/main/config'){
 //-- CSS
 define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
 
+// index css link
+define('ASSEST_PATH_INDEX',	'/dev_bb/public/index_assests');
+
 // Home menu Rrl set
 define('HOME_URL',	'/dev_bb/admin/index');
 
