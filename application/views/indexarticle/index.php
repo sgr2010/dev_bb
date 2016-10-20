@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<?php
+	define('TITLE','ログイン');
+//	include('header.php');
+//	$screen="login.php";
+?>
+
+<?php 
+// $this->layout = '~/views/shared/header.php';
+
+?>
+
+    
+
+</head>
+
 <!DOCTYPE HTML>
 <!--
     Minimaxing by HTML5 UP
@@ -6,12 +25,12 @@
 -->
 <html>
     <head>
-        <title>Be Bengal ! - Nothing Speaial but everythings are special</title>
+        <title>Minimaxing by HTML5 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--[if lte IE 8]><script src="<?php echo ASSEST_PATH_INDEX; ?>/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="<?php echo ASSEST_PATH_INDEX; ?>/css/main.css" />
-        <!--[if lte IE 9]><link rel="stylesheet" href="<?php echo ASSEST_PATH_INDEX; ?>/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="/mvc-test/public/scripts/main.css" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="./script/ie9.css" /><![endif]-->
     </head>
     <body>
         <div id="page-wrapper">
@@ -19,17 +38,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="12u">
+
                             <header id="header">
-                                <h1><a href="#" id="logo">Be Bengal !</a></h1>
+                                <h1><a href="#" id="logo">Minimaxing</a></h1>
                                 <nav id="nav">
-                                    <a href="#" class="current-page-item">Homepage</a>
-                                    <a href="#" >poletics</a>
-                                    <a href="#">Science</a>
-                                    <a href="#">Education</a>
-                                    <a href="#">Carrer</a>
-                                    <a href="#">Turist Travel</a>
-                                     <a href="#">Technology</a>
-                                     <a href="#">Classification</a>
+                                    <a href="index.html" class="current-page-item">Homepage</a>
+                                    <a href="twocolumn1.html">Two Column #1</a>
+                                    <a href="twocolumn2.html">Two Column #2</a>
+                                    <a href="onecolumn.html">One Column</a>
+                                    <a href="threecolumn.html">Three Column</a>
                                 </nav>
                             </header>
 
@@ -53,7 +70,7 @@
                         <div class="4u 12u(mobile)">
 
                             <section>
-                                <h2>Welcome to Be Bengal!</h2>
+                                <h2>Welcome to Minimaxing!</h2>
                                 <p>This is <strong>Minimaxing</strong>, a fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a> and released for free by <a href="http://html5up.net">HTML5 UP</a>. It features
                                 a simple, lightweight design, solid HTML5 and CSS3 code, and full responsive support for desktop, tablet, and mobile displays.</p>
                                 <footer class="controls">
@@ -68,12 +85,12 @@
                                 <h2>Who are you guys?</h2>
                                 <ul class="small-image-list">
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic2.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="images/pic2.jpg" alt="" class="left" /></a>
                                         <h4>Jane Anderson</h4>
                                         <p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic1.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
                                         <h4>James Doe</h4>
                                         <p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
                                     </li>
@@ -123,21 +140,21 @@
                                 sit amet consequat sed dolore.</p>
                                 <ul class="big-image-list">
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic3.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="images/pic3.jpg" alt="" class="left" /></a>
                                         <h3>Magna Gravida Dolore</h3>
                                         <p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
                                         facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
                                         Maecenas eu arcu purus, phasellus fermentum elit.</p>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic4.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="images/pic4.jpg" alt="" class="left" /></a>
                                         <h3>Magna Gravida Dolore</h3>
                                         <p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
                                         facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
                                         Maecenas eu arcu purus, phasellus fermentum elit.</p>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic5.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="images/pic5.jpg" alt="" class="left" /></a>
                                         <h3>Magna Gravida Dolore</h3>
                                         <p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo
                                         facilisis amet quis consectetur in, sollicitudin vitae justo. Cras
@@ -152,7 +169,7 @@
                             <article class="blog-post">
                                 <h2>Just another blog post</h2>
                                 <a class="comments" href="#">33 comments</a>
-                                <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic6.jpg" alt="" class="top blog-post-image" /></a>
+                                <a href="#"><img src="images/pic6.jpg" alt="" class="top blog-post-image" /></a>
                                 <h3>Magna Gravida Dolore</h3>
                                 <p>Aenean non massa sapien. In hac habitasse platea dictumst.
                                 Maecenas sodales purus et nulla sodales aliquam. Aenean ac
@@ -253,12 +270,12 @@
         </div>
 
         <!-- Scripts -->
-            <script src="<?php echo ASSEST_PATH_INDEX; ?>/js/jquery.min.js"></script>
-            <script src="<?php echo ASSEST_PATH_INDEX; ?>/js/skel.min.js"></script>
-            <script src="<?php echo ASSEST_PATH_INDEX; ?>/js/skel-viewport.min.js"></script>
-            <script src="<?php echo ASSEST_PATH_INDEX; ?>/js/util.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/skel-viewport.min.js"></script>
+            <script src="assets/js/util.js"></script>
             <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-            <script src="<?php echo ASSEST_PATH_INDEX; ?>/js/main.js"></script>
+            <script src="assets/js/main.js"></script>
 
     </body>
 </html>
