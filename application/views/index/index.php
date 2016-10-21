@@ -19,19 +19,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="12u">
-                            <header id="header">
-                                <h1><a href="#" id="logo">Be Bengal !</a></h1>
-                                <nav id="nav">
-                                    <a href="#" class="current-page-item">Homepage</a>
-                                    <a href="#" >poletics</a>
-                                    <a href="#">Science</a>
-                                    <a href="#">Education</a>
-                                    <a href="#">Carrer</a>
-                                    <a href="#">Turist Travel</a>
-                                     <a href="#">Technology</a>
-                                     <a href="#">Classification</a>
-                                </nav>
-                            </header>
+                        <?php 
+                            // front header menu
+                            include(MyHelpers::UrlContent('~/views/bb_front/bb_front_header_menu.php'));
+                        ?>                           
 
                         </div>
                     </div>

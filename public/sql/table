@@ -21,3 +21,24 @@ CREATE TABLE `deb_bb`.`bb_articles_type` (
 `delete_flag` INT NOT NULL , 
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_article_main` ( 
+`id` INT(11) NOT NULL AUTO_INCREMENT , 
+`article_tittle` VARCHAR(128) NOT NULL , 
+`article_type` INT(1) NOT NULL , 
+`article_tag` VARCHAR(10) NULL , 
+`text01` TEXT NULL , 
+`text02` TEXT NOT NULL , 
+`text03` TEXT NOT NULL , 
+`front_img` VARCHAR(32) NULL , 
+`content_img` VARCHAR(32) NULL , 
+`icon01` VARCHAR(32) NULL , 
+`icon02` VARCHAR(32) NULL , 
+`article_status` INT(1) NOT NULL DEFAULT '0' , 
+`date_of_publication` DATETIME NULL , 
+`update_date` DATETIME NULL , 
+`update_admin_id` INT(11) NULL , 
+`delete_flag` CHAR(1) NOT NULL DEFAULT '0' , 
+`writer_id` INT(11) NOT NULL , 
+PRIMARY KEY (`id`)
+) ENGINE = InnoDB;

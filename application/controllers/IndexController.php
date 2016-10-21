@@ -24,7 +24,8 @@ class IndexController extends Controller{
      * @return type
      */
     public function index($id=null){  
-        
+
+        $this->view->set( 'active' , 1 );
         return $this->view();
         
     }
