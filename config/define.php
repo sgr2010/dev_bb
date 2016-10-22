@@ -26,6 +26,9 @@ define('ASSEST_PATH_INDEX',	'/dev_bb/public/index_assests');
 // Home menu Rrl set
 define('HOME_URL',	'/dev_bb/admin/index');
 
+// Home menu Rrl set
+define('BB_PORJECT_URL',	'/dev_bb/');
+
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 	define( 'ADMINUSER', $_SESSION['username']);

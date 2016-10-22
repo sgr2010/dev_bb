@@ -15,8 +15,8 @@ class AdminController extends Controller{
     //put your code here
     
    protected function init(){    
-        // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
-        // $this->cfg['db']['password'], $this->cfg['db']['database']);        
+        $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
+        $this->cfg['db']['password'], $this->cfg['db']['database']);        
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
             $ADMINUSER = $_SESSION['username'];
         }else{
@@ -36,6 +36,11 @@ class AdminController extends Controller{
      * @return type
      */
     public function index($id=null){  
+        $Auth = new AdminloginController();
+        if( $Auth->iflogin() != true ){
+            header( 'location: adminlogin/login' );
+            exit;
+        }
         $menu = "Dashboard";
         $menu_sub = null;
         $page_header_sub_title = "Home";
