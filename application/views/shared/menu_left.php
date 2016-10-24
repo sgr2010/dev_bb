@@ -80,7 +80,7 @@
             </div><!-- /.sidebar-shortcuts -->
             <ul class="nav nav-list">
                 <li class="active">
-                    <a href="/dev_bb/admin/index">
+                    <a href="<?php echo MODE; ?>/admin/index">
                         <i class="menu-icon fa fa-tachometer"></i>
                         <span class="menu-text"> Dashboard </span>
                     </a>
@@ -103,14 +103,14 @@
                             <b class="arrow"></b>
                             <ul class="submenu">
                                 <li class="">
-                                    <a href="/dev_bb/master/master_article_type_new">
+                                    <a href="<?php echo MODE; ?>/master/master_article_type_new">
                                         <i class="menu-icon fa fa-plus purple"></i>
                                         New Article Type
                                     </a>
                                     <b class="arrow"></b>
                                 </li>
                                 <li class="">
-                                    <a href="/dev_bb/master/master_article_type_view">
+                                    <a href="<?php echo MODE; ?>/master/master_article_type_view">
                                         <i class="menu-icon fa fa-eye pink"></i>
                                         View Article Type
                                     </a>
@@ -147,7 +147,7 @@
                                     <b class="arrow"></b>
                                 </li>
                                 <li class="">
-                                    <a href="/dev_bb/articles/input">
+                                    <a href="<?php echo MODE; ?>/articles/input">
                                         <i class="menu-icon fa fa-plus purple"></i>
                                         New Article Add
                                     </a>

@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class ArticlesController extends Controller{
+class articlesController extends Controller{
     //put your code here
 
    

@@ -71,144 +71,25 @@
         <!-- nav manu end here -->
 
                     <div class="page-content">
-                        <div class="ace-settings-container" id="ace-settings-container">
-                            <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-                                <i class="ace-icon fa fa-cog bigger-130"></i>
-                            </div>
+                        
 
-                            <div class="ace-settings-box clearfix" id="ace-settings-box">
-                                <div class="pull-left width-50">
-                                    <div class="ace-settings-item">
-                                        <div class="pull-left">
-                                            <select id="skin-colorpicker" class="hide">
-                                                <option data-skin="no-skin" value="#438EB9">#438EB9</option>
-                                                <option data-skin="skin-1" value="#222A2D">#222A2D</option>
-                                                <option data-skin="skin-2" value="#C6487E">#C6487E</option>
-                                                <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-                                            </select>
-                                        </div>
-                                        <span>&nbsp; Choose Skin</span>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-add-container">
-                                            Inside
-                                            <b>.container</b>
-                                        </label>
-                                    </div>
-                                </div><!-- /.pull-left -->
-
-                                <div class="pull-left width-50">
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
-                                    </div>
-
-                                    <div class="ace-settings-item">
-                                        <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
-                                        <label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
-                                    </div>
-                                </div><!-- /.pull-left -->
-                            </div><!-- /.ace-settings-box -->
-                        </div><!-- /.ace-settings-container -->
 
                          <!-- /.page-header start -->
                         <?php 
-                            include(MyHelpers::UrlContent('~/views/shared/page_header.php'));                        ?>
+                            include(MyHelpers::UrlContent('~/views/shared/page_header.php'));                        
+                        ?>
 
                         <!-- /.page-header end -->
-
-
                         <div class="row">
                             <div class="col-xs-12">
                                 <!-- PAGE CONTENT BEGINS -->
-                                <form class="form-horizontal" role="form" name="frm_article" method="POST" action="input" >
-                                  <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
-                                        <div class="col-sm-9">
-                                            <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" />
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="space-4"></div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-tags">Tag input</label>
-                                        <div class="col-sm-9">
-                                            <div class="inline">
-                                                <input type="text" name="article_tage" id="form-field-tags" value="" placeholder="Enter tags ..." />
-                                            </div>
-                                        </div>  
-                                    </div> 
-                                   
-                                    <div class="space-4"></div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Type</label>
-                                        <div class="col-sm-9">
-                                       
-                                                <select class="chosen-select form-control" name="article_type" id="form-field-select-3" data-placeholder="Choose a Article Type...">
-                                                <option value=""></option>
-                                                <?php
-                                                foreach ($articleTypes as $key => $types) {
-                                                    echo "<option value=". $types['id'] .">".$types['article_type_title']."</option>";
-                                                }
-                                                ?>                                                   
-                                                </select>
-                                     
-                                        </div>  
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content</label>
-                                        <div class="col-sm-9">
-                                                                                                     
-                                                <div class="widget-box widget-color-blue">                                
-                                                    <div class="widget-main no-padding">
-                                                        <textarea name="article_contects" data-provide="markdown" data-iconlibrary="fa" rows="20">
-                                                        </textarea>
-                                                    </div>                                                
-                                                </div>
-                                           
-                                        </div>  
-                                    </div>                                  
-                                    <div class="clearfix form-actions">
-                                        <div class="col-md-offset-3 col-md-9">
-                                            <button class="btn btn-info" type="Submit">
-                                                <i class="ace-icon fa fa-check bigger-110"></i>Submit</button>&nbsp; &nbsp; &nbsp;
-                                            <button class="btn" type="reset">
-                                                <i class="ace-icon fa fa-undo bigger-110"></i>Reset</button>
-                                        </div>
-                                    </div>
-                                    </form>
-                        </div><!-- /.row -->
-                    </div><!-- /.page-content -->
+                                <!-- Form list here --> 
+                                <?php 
+                                    include(MyHelpers::UrlContent('~/views/bb_forms/article_new_add_frm.php'));
+                                ?>
+                                <!-- Form list end here --> 
+                            </div><!-- /.row -->
+                        </div><!-- /.page-content -->
                 </div>
             </div><!-- /.main-content -->
 

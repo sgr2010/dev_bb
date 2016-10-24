@@ -11,7 +11,7 @@
  *
  * @author SGR
  */
-class MasterModel extends Model{    
+class masterModel extends Model{    
     
     protected function init() {
 
