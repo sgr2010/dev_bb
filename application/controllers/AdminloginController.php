@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class AdminloginController extends Controller{
+class adminloginController extends Controller{
     //put your code here
     
    protected function init(){    

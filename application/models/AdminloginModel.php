@@ -11,7 +11,7 @@
  *
  * @author SGR
  */
-class AdminloginModel extends Model{    
+class adminloginModel extends Model{    
     
     protected function init() {
         

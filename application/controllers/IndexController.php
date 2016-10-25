@@ -11,12 +11,12 @@
  *
  * @author SGR Infotech
  */
-class IndexController extends Controller{
+class indexController extends Controller{
     //put your code here
     
    protected function init(){    
-        // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
-        // $this->cfg['db']['password'], $this->cfg['db']['database']);        
+        $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
+        $this->cfg['db']['password'], $this->cfg['db']['database']);        
     }
     /**
      * 
@@ -24,7 +24,6 @@ class IndexController extends Controller{
      * @return type
      */
     public function index($id=null){  
-
         $this->view->set( 'active' , 1 );
         return $this->view();
         
