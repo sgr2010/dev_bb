@@ -50,16 +50,17 @@ class adminloginController extends Controller{
             $data = $_POST;
             $username = $_POST['user_name'];
             $res = $this->_model->chk_login($data);
-            
+   
             if( $res == 1 ){
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $username;     
-                header( 'location: ../admin/index' );
-                exit;            
-            }
-
-            if( $res == 0 ){
                 $msg = "<span style='color: red';>Your Account is not activated !</span>";
+            }else if( $res == 0 ){
+                $msg = "<span style='color: red';>You are not registered user !</span>";
+            }else{
+                $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $res['user_name'];
+                $_SESSION['admin_id'] = $res['id'];     
+                header( 'location: ../admin/index' );
+                exit;   
             }
         }        
 

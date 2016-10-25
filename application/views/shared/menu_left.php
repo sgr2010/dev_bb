@@ -120,6 +120,30 @@
                             </ul>
                         </li>
                     </ul>
+                     <ul class="submenu">
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                Manu
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+                            <b class="arrow"></b>
+                            <ul class="submenu">
+                                <li class="">
+                                    <a href="<?php echo MODE; ?>/menu/master_menu_new">
+                                        <i class="menu-icon fa fa-plus purple"></i>New Menu Add
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="<?php echo MODE; ?>/menu/master_menu_view">
+                                        <i class="menu-icon fa fa-eye pink"></i>View Menu
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="">
