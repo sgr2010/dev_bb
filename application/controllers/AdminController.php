@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class AdminController extends Controller{
+class adminController extends Controller{
     //put your code here
     
    protected function init(){    
@@ -22,13 +22,7 @@ class AdminController extends Controller{
         }else{
             $ADMINUSER = " Guest";
         }
-
-        $Auth = new AdminloginController();
-
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
+      
     }
     /**
      * 
@@ -36,7 +30,7 @@ class AdminController extends Controller{
      * @return type
      */
     public function index($id=null){  
-        $Auth = new AdminloginController();
+        $Auth = new adminloginController();
         if( $Auth->iflogin() != true ){
             header( 'location: adminlogin/login' );
             exit;

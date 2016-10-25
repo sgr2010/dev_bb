@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class MasterController extends Controller{
+class masterController extends Controller{
     //put your code here
 
    

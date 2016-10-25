@@ -316,7 +316,7 @@
                 </div>
             </div><!-- /.navbar-container -->
         </div>
-          <form id="logoout" action="/dev_bb/adminlogin/logout" method="POST" >
+          <form id="logoout" action="<?php echo MODE; ?>/adminlogin/logout" method="POST" >
             <input type="hidden" name="mode" value="logout" />
         </form>
 

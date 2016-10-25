@@ -2,29 +2,37 @@
 
 //-- ■　基本設定
 
-if(__DIR__ == '/var/www/html/main/config'){
-	// 本番環境 / production
-	define('DOMAIN', 'https://bebengal.com/');	// あとで[https]に変更
-	define('MODE', '/');
-}else if(__DIR__ == '/home/content/79/10545479/html/online/config'){
-	// テストサーバ / test server
-	define('DOMAIN', 'http://online.duttapukur.com/');
-	define('MODE', '');
-}else{
-	// ローカル環境 / test
-	define('DOMAIN', 'localhost');
-	define('MODE', '/99');
-}
+// if(getenv(DOMAIN_NAME) == 'www.bebengal.com'){
+// 	// 本番環境 / production
+// 	define('DOMAIN', 'http://www.bebengal.com/');	// あとで[https]に変更
+// 	define('MODE', '');
+// }else{
+// 	// ローカル環境 / test
+// 	define('DOMAIN', 'localhost');
+// 	define('MODE', '/dev_bb');
+// }
+define('DOMAIN', 'localhost');
+define('MODE', '/dev_bb');
 
 // for SGR 
 //-- CSS
-define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
+ //define('ASSEST_PATH_ADMIN',	'/dev_bb/public/assets');
+ define('ASSEST_PATH_ADMIN',	MODE.'/public/assets');
+
+//-- CSS
+//define('ASSEST_PATH_ADMIN',	'/public/assets');
+
 
 // index css link
-define('ASSEST_PATH_INDEX',	'/dev_bb/public/index_assests');
+//define('ASSEST_PATH_INDEX',	'/public/index_assests');
+
+// index css link
+ define('ASSEST_PATH_INDEX',	MODE.'/public/index_assests');
+
 
 // Home menu Rrl set
-define('HOME_URL',	'/dev_bb/admin/index');
+//define('HOME_URL',	'/dev_bb/admin/index');
+define('HOME_URL',	MODE.'/admin/index');
 
 // Home menu Rrl set
 define('BB_PORJECT_URL',	'/dev_bb/');
