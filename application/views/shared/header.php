@@ -1,6 +1,4 @@
-
-
-    <div id="navbar" class="navbar navbar-default          ace-save-state">
+<div id="navbar" class="navbar navbar-default          ace-save-state">
             <div class="navbar-container ace-save-state" id="navbar-container">
                 <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
                     <span class="sr-only">Toggle sidebar</span>
@@ -316,38 +314,6 @@
                 </div>
             </div><!-- /.navbar-container -->
         </div>
-          <form id="logoout" action="<?php echo MODE; ?>/adminlogin/logout" method="POST" >
+        <form id="logoout" action="<?php echo MODE; ?>/adminlogin/logout" method="POST" >
             <input type="hidden" name="mode" value="logout" />
         </form>
-
-         <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('myLogout').onclick = function() {
-                    document.getElementById('logoout').submit();
-                    return false;
-                };
-            };
-        </script>
-
-
-
-
-        <!-- page specific plugin scripts -->
-
-        <!--[if lte IE 8]>
-          <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/excanvas.min.js"></script>
-        <![endif]-->
-<!--         <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-ui.custom.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.ui.touch-punch.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.easypiechart.min.js"></script> -->
-<!--         <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.sparkline.index.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.flot.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.flot.pie.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.flot.resize.min.js"></script> -->
-
-        <!-- ace scripts -->
-<!--         <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace-elements.min.js"></script> -->
-
-
-
-        

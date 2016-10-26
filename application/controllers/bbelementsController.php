@@ -27,7 +27,7 @@ class bbelementsController extends Controller{
     
 
     public function main_page(){
-         $menu = "Dashboard";
+        $menu = "Dashboard";
         $menu_sub = null;
         $page_header_sub_title = "Home";
         $page_header_title = "Dashboard";
