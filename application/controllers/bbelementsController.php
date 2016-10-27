@@ -40,6 +40,25 @@ class bbelementsController extends Controller{
         return $this->view();
 
     }
+
+    public function editor(){
+        $menu = "Dashboard";
+        $menu_sub = "Editor";
+        $page_header_sub_title = "Home";
+        $page_header_title = "Dashboard";
+
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "home" );
+        $this->view->set( 'active', "active" );
+               
+        return $this->view();
+
+    }
     
    
     
