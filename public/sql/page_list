@@ -11,3 +11,7 @@ Menu Add
 	[ Controller ] 	: menu @master_menu_new
 	[ view ] 		: view/master/master_menu_new.php
 	[ Model ]		: menuModel @mdl_register_new_menu
+
+
+
+Add New Article

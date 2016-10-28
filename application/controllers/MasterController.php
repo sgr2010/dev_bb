@@ -32,8 +32,7 @@ class masterController extends Controller{
         $mode = " confirm";
 
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
-            $mode = $_POST['mode'];  
-            
+            $mode = $_POST['mode']; 
         }
 
         if( $mode == "new" ){

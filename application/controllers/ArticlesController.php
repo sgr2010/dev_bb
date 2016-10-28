@@ -43,6 +43,7 @@ class articlesController extends Controller{
     }
 
      public function input( $request = Null ){
+        $mode = " confirm";
         $menu = "Contents";
         $menu_sub = "New Article Add";
         $page_header_sub_title = "Form";
@@ -51,14 +52,35 @@ class articlesController extends Controller{
         $this->view->set( 'menu_sub', $menu_sub );
         $this->view->set( 'page_header_title', $page_header_title );
         $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+        
+
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
-            var_dump($_POST); exit();
+            $mode = $_POST['mode']; 
         }
+
+        if( $mode == "save" ){
+            $res = $this->_model->mdl_register_new_article( $_POST );             
+            if( $res == true ){
+                header( 'location: ../master/master_article_type_view' );
+                exit;
+            }
+        }
+
+
         
         $res = $this->_model->get_articles_type();        
         
         $this->view->set('articleTypes',$res);
         //$template = "admin/articles/input";
+
+                // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+
+         // left menu active 
+        $this->view->set( 'current_sub', "article_input" );
+        $this->view->set( 'active_sub', "active" );
+
         
         return $this->view();
 
