@@ -11,7 +11,7 @@
  *
  * @author SGR
  */
-class ArticlesModel extends Model{    
+class articlesModel extends Model{    
     
     protected function init() {
 
@@ -50,6 +50,30 @@ class ArticlesModel extends Model{
          // var_dump( $raw['acc_active']);
          // exit();
         
+    }
+
+
+    public function mdl_register_new_article( $value ){
+         $data = array(
+            'article_tittle'=>$value['article_tittle'],
+            'type_describe'=>$value['article_type_describe'],
+            'article_type'=>$value['article_type'],
+            'article_tag'=>$value['article_tage'],
+            'text01'=>$value['content1'],
+            'text02'=>$value['content2'],
+            'text03'=>$value['content3'],
+            'date_of_publication'=>$value['publish_date'],
+            'update_admin_id'=>$_SESSION['admin_id'],
+            'update_date'=>date("Y-m-d")
+        );
+        
+        // Database Table name 
+        $table ="bb_articles_main";
+        
+        // after data insert return will be boolen Type True / False
+        $result = $this->db->insert($data, $table);     
+
+       return $result;
     }
 
 

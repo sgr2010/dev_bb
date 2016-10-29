@@ -11,32 +11,29 @@
  *
  * @author SGR
  */
-class masterModel extends Model{    
+class menuModel extends Model{    
     
     protected function init() {
 
     }
 
     
-   public function mdl_register_new_article_type( $value ){    
+   public function mdl_register_new_menu( $value ){    
         $data = array(
-            'article_type_title'=>$value['article_tittle'],
-            'type_describe'=>$value['article_type_describe']             
-        );
-        
+            'menu_name'=>$value['menu_name'],
+            'menu_description'=>$value['menu_describe'],
+            'date_of_regi'=>date("Y-m-d"),
+            'admin_id'=> $_SESSION['admin_id']
+        );        
         // Database Table name 
-        $table ="bb_articles_type";
-        
+        $table ="bb_menu";        
         // after data insert return will be boolen Type True / False
         $result = $this->db->insert($data, $table);     
-
-       return $result;
-
+        return $result;
    }
 
-   public function get_articles_type_all(){
-
-        $table = "bb_articles_type";
+   public function get_menu_all(){
+        $table = "bb_menu";
         $field = "*";
         $where = "";
         $result = $this->db->select( $field, $table, $where);

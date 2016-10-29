@@ -57,8 +57,6 @@
         include(MyHelpers::UrlContent('~/views/shared/menu_left.php'));
     ?>
 
-    
-
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
         <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
     </div>
@@ -69,40 +67,31 @@
             <?php 
                 include(MyHelpers::UrlContent('~/views/shared/nav_menu_title_bar.php'));
             ?>
-        <!-- nav manu end here -->
-
-                    <div class="page-content">                        
-                     
-                        <!-- /.page-header start -->
+            <div class="page-content">
+            <!-- /.page-header start -->
+                <?php 
+                    include(MyHelpers::UrlContent('~/views/shared/page_header.php'));
+                ?>
+                <!-- /.page-header end -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <!-- Form list here --> 
                         <?php 
-                            include(MyHelpers::UrlContent('~/views/shared/page_header.php'));
+                            include(MyHelpers::UrlContent('~/views/bb_forms/menu_new_add_frm.php'));
                         ?>
-                        <!-- /.page-header end -->
+                        <!-- Form list end here --> 
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+            </div>
+        </div><!-- /.main-content -->
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <!-- PAGE CONTENT BEGINS -->
-                                <!-- Form list here --> 
-                            <?php 
-                                include(MyHelpers::UrlContent('~/views/bb_forms/article_type_new_add_frm.php'));
-                            ?>
-
-                                <!-- Form list end here --> 
-                        </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div>
-                
-            </div><!-- /.main-content -->
-
-            <?php 
-                include(MyHelpers::UrlContent('~/views/shared/footer.php'));
-            ?>
-
-            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-            </a>
-        </div><!-- /.main-container -->
-
-
-    </body>
+        <?php 
+            include(MyHelpers::UrlContent('~/views/shared/footer.php'));
+        ?>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+</body>
 </html>

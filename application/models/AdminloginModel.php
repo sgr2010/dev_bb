@@ -11,7 +11,7 @@
  *
  * @author SGR
  */
-class AdminloginModel extends Model{    
+class adminloginModel extends Model{    
     
     protected function init() {
         
@@ -49,8 +49,11 @@ class AdminloginModel extends Model{
         $raw = mysql_fetch_array($result);
         if ( $raw['acc_active']  == 0 ) {
            return 0;
+        } if ( $raw['acc_active']  == 1 ) {
+           return 1;
         }else{
-            return $this->db->numRows($result);    
+            //return $this->db->numRows($result);    
+            return $raw;   
         }
          // var_dump( $raw['acc_active']);
          // exit();

@@ -11,7 +11,7 @@
  *
  * @author SGR Infotech
  */
-class adminController extends Controller{
+class bbelementsController extends Controller{
     //put your code here
     
    protected function init(){    
@@ -24,19 +24,26 @@ class adminController extends Controller{
         }
       
     }
-    /**
-     * 
-     * @param type $id = error code id
-     * @return type
-     */
-    public function index($id=null){  
-        $Auth = new adminloginController();
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
+    
+
+    public function main_page(){
         $menu = "Dashboard";
         $menu_sub = null;
+        $page_header_sub_title = "Home";
+        $page_header_title = "Dashboard";
+
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+               
+        return $this->view();
+
+    }
+
+    public function editor(){
+        $menu = "Dashboard";
+        $menu_sub = "Editor";
         $page_header_sub_title = "Home";
         $page_header_title = "Dashboard";
 
@@ -50,8 +57,10 @@ class adminController extends Controller{
         $this->view->set( 'active', "active" );
                
         return $this->view();
-        
-    }   
 
-     
+    }
+    
+   
+    
+    
 }
