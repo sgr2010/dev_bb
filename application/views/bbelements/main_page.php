@@ -41,82 +41,44 @@
         <script src="ace-extra.min.js assets/js/html5shiv.min.js"></script>
         <script src="ace-extra.min.js assets/js/respond.min.js"></script>
         <![endif]-->
-
     </head>
+    
     <body class="no-skin">
 
         <?php
         // header menu LIST shared
             include(MyHelpers::UrlContent('~/views/shared/header.php'));
-        ?>
-
-        <?php
         // felt menu LIST shared
             include(MyHelpers::UrlContent('~/views/shared/menu_left_test.php'));
         ?>
-        
-        
-
-            <div class="main-content">
-                <div class="main-content-inner">
-                    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
-                        <ul class="breadcrumb">
-                            <li>
-                                <i class="ace-icon fa fa-home home-icon"></i>
-                                <a href="<?php echo HOME_URL; ?>">Home</a>
-                            </li>
-                            <li <?php if( $menu_sub == null ) ?>    class = "active"; >
-                                <?php if( $menu_sub != null ) { ?> <a href="#"><?php echo $menu; ?></a>
-                                <?php 
-                                }else{ echo "$menu"; }   ?>
-                            </li>
-                            <?php
-                                if( $menu_sub != null ){ ?>      
-                            <li class="active"><?php echo "$menu_sub"; ?></li>
-                              <?php    }
-                            ?>
-                        </ul><!-- /.breadcrumb -->
-
-                        <div class="nav-search" id="nav-search">
-                            <form class="form-search">
-                                <span class="input-icon">
-                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                                </span>
-                            </form>
-                        </div><!-- /.nav-search -->
-                    </div>
-
-                    <div class="page-content">                        
-                     
-                        <!-- /.page-header start -->
+        <div class="main-content">
+            <div class="main-content-inner">
+                <?php 
+                    include(MyHelpers::UrlContent('~/views/shared/nav_menu_title_bar.php'));
+                ?>                
+                <div class="page-content">
+                    <!-- /.page-header start -->
+                    <?php 
+                        include(MyHelpers::UrlContent('~/views/shared/page_header.php'));
+                    ?>
+                    <!-- /.page-header end -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <!-- Form list here --> 
                         <?php 
-                            include(MyHelpers::UrlContent('~/views/shared/page_header.php'));
+                            //include(MyHelpers::UrlContent('~/views/bb_forms/article_type_new_add_frm.php'));
                         ?>
-                        <!-- /.page-header end -->
-
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <!-- PAGE CONTENT BEGINS -->
-                                <!-- Form list here --> 
-                            <?php 
-                                //include(MyHelpers::UrlContent('~/views/bb_forms/article_type_new_add_frm.php'));
-                            ?>
-
-                                <!-- Form list end here --> 
-                            </div><!-- /.row -->
-                        </div><!-- /.page-content -->
-                    </div>
+                            <!-- Form list end here --> 
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
                 </div>
             </div>
         </div>
 
-         <?php 
+        <?php 
             include(MyHelpers::UrlContent('~/views/shared/footer.php'));
         ?>
-        
-
-
         
     </body>
 </html>
@@ -130,20 +92,20 @@
 
 
 
-         <!--[if !IE]> -->
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+ <!--[if !IE]> -->
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
 
-        <!-- <![endif]-->
+<!-- <![endif]-->
 
-        <!--[if IE]>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
-        <![endif]-->
-        <script type="text/javascript">
-            if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-        </script>
+<!--[if IE]>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
 
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
 
 
 

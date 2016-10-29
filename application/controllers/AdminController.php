@@ -44,6 +44,10 @@ class adminController extends Controller{
         $this->view->set( 'menu_sub', $menu_sub );
         $this->view->set( 'page_header_title', $page_header_title );
         $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "home" );
+        $this->view->set( 'active', "active" );
                
         return $this->view();
         

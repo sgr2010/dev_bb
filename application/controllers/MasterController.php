@@ -32,8 +32,7 @@ class masterController extends Controller{
         $mode = " confirm";
 
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
-            $mode = $_POST['mode'];  
-            
+            $mode = $_POST['mode']; 
         }
 
         if( $mode == "new" ){
@@ -59,7 +58,7 @@ class masterController extends Controller{
     public function master_article_type_view(){
         $res = $this->_model->get_articles_type_all();
       
-
+        
         $this->view->set('articleTypes',$res);
         $menu = "Masters";
         $menu_sub = "Article Types";
@@ -69,6 +68,13 @@ class masterController extends Controller{
         $this->view->set( 'menu_sub', $menu_sub );
         $this->view->set( 'page_header_title', $page_header_title );
         $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "master" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article_type" );
+        $this->view->set( 'active_sub', "active" );
 
         return $this->view();
 

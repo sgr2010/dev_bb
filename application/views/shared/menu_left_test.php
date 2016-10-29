@@ -38,7 +38,7 @@
                     </div>
                 </div><!-- /.sidebar-shortcuts -->
                 <ul class="nav nav-list">
-                    <li class="active">
+                    <li class=<?php if($current == "home" ) echo 'active'; ?>>
                         <a href="index.html">
                             <i class="menu-icon fa fa-tachometer"></i>
                             <span class="menu-text"> Dashboard </span>
@@ -47,13 +47,10 @@
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
+                    <li class="<?php if($current == 'master' ) echo $active; ?>">
                         <a href="#" class="dropdown-toggle">
                             <i class="menu-icon fa fa-desktop"></i>
-                            <span class="menu-text">
-                                UI &amp; Elements
-                            </span>
-
+                            <span class="menu-text">Masters</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
 
@@ -63,16 +60,14 @@
                             <li class="">
                                 <a href="#" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
-
-                                    Layouts
+                                    Test Menu
                                     <b class="arrow fa fa-angle-down"></b>
                                 </a>
 
                                 <b class="arrow"></b>
-
                                 <ul class="submenu">
                                     <li class="">
-                                        <a href="top-menu.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Top Menu
                                         </a>
@@ -81,7 +76,7 @@
                                     </li>
 
                                     <li class="">
-                                        <a href="two-menu-1.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Two Menus 1
                                         </a>
@@ -90,7 +85,7 @@
                                     </li>
 
                                     <li class="">
-                                        <a href="two-menu-2.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Two Menus 2
                                         </a>
@@ -99,7 +94,7 @@
                                     </li>
 
                                     <li class="">
-                                        <a href="mobile-menu-1.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Default Mobile Menu
                                         </a>
@@ -108,7 +103,7 @@
                                     </li>
 
                                     <li class="">
-                                        <a href="mobile-menu-2.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Mobile Menu 2
                                         </a>
@@ -117,7 +112,7 @@
                                     </li>
 
                                     <li class="">
-                                        <a href="mobile-menu-3.html">
+                                        <a href="#">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Mobile Menu 3
                                         </a>
@@ -125,122 +120,36 @@
                                         <b class="arrow"></b>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>                            
 
-                            <li class="">
-                                <a href="typography.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Typography
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="elements.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Elements
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="buttons.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Buttons &amp; Icons
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="content-slider.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Content Sliders
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="treeview.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Treeview
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="jquery-ui.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    jQuery UI
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="nestable-list.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Nestable Lists
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
+                            <li class="<?php if( $current == 'master' ) echo 'active'; ?>">
                                 <a href="#" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
-
-                                    Three Level Menu
+                                    Article Type
                                     <b class="arrow fa fa-angle-down"></b>
                                 </a>
 
                                 <b class="arrow"></b>
 
-                                <ul class="submenu">
+                                <ul class="submenu">                                    
                                     <li class="">
                                         <a href="#">
-                                            <i class="menu-icon fa fa-leaf green"></i>
-                                            Item #1
+                                            <i class="menu-icon fa fa-plus purple"></i>
+                                            Add Article Type
                                         </a>
 
                                         <b class="arrow"></b>
                                     </li>
 
                                     <li class="">
-                                        <a href="#" class="dropdown-toggle">
-                                            <i class="menu-icon fa fa-pencil orange"></i>
-
-                                            4th level
-                                            <b class="arrow fa fa-angle-down"></b>
+                                        <a href="<?php echo MODE; ?>/master/master_article_type_view">
+                                            <i class="menu-icon fa fa-eye pink"></i>
+                                            View Article Type
                                         </a>
 
                                         <b class="arrow"></b>
-
-                                        <ul class="submenu">
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-plus purple"></i>
-                                                    Add Product
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-eye pink"></i>
-                                                    View Products
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-                                        </ul>
                                     </li>
-                                </ul>
+                                </ul>                             
                             </li>
                         </ul>
                     </li>
@@ -257,7 +166,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="tables.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Simple &amp; Dynamic
                                 </a>
@@ -344,7 +253,7 @@
                     </li>
 
                     <li class="">
-                        <a href="calendar.html">
+                        <a href="#">
                             <i class="menu-icon fa fa-calendar"></i>
 
                             <span class="menu-text">
@@ -466,7 +375,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="profile.html">
+                                <a href=#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     User Profile
                                 </a>
@@ -475,7 +384,7 @@
                             </li>
 
                             <li class="">
-                                <a href="inbox.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Inbox
                                 </a>
@@ -484,7 +393,7 @@
                             </li>
 
                             <li class="">
-                                <a href="pricing.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Pricing Tables
                                 </a>
@@ -493,7 +402,7 @@
                             </li>
 
                             <li class="">
-                                <a href="invoice.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Invoice
                                 </a>
@@ -502,7 +411,7 @@
                             </li>
 
                             <li class="">
-                                <a href="timeline.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Timeline
                                 </a>
@@ -511,7 +420,7 @@
                             </li>
 
                             <li class="">
-                                <a href="search.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Search Results
                                 </a>
@@ -520,7 +429,7 @@
                             </li>
 
                             <li class="">
-                                <a href="email.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Email Templates
                                 </a>
@@ -529,7 +438,7 @@
                             </li>
 
                             <li class="">
-                                <a href="login.html">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Login &amp; Register
                                 </a>
