@@ -106,7 +106,5 @@ $cfg['php']['smtp_port'] = '25';
 
 
 
-define( 'PRODUCT', 'Google System トレーニング' );
-define( 'SESSION_NAME', 'career-Training' );
 define( 'USER_ID', 'UserID' );
 
