@@ -122,7 +122,7 @@
                                 </ul>
                             </li>                            
 
-                            <li class="<?php if( $current == 'master' ) echo 'active'; ?>">
+                            <li class="<?php if( $current == 'master' ) echo 'active'; ?>" >
                                 <a href="#" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Article Type
@@ -185,7 +185,7 @@
                         </ul>
                     </li>
 
-                    <li class="">
+                    <li class="<?php if( $current == 'article' ) echo $active; ?>">
                         <a href="#" class="dropdown-toggle">
                             <i class="menu-icon fa fa-pencil-square-o"></i>
                             <span class="menu-text"> Article </span>
@@ -197,7 +197,7 @@
 
                         <ul class="submenu">
                             <li class="">
-                                <a href="/dev_bb/articles/input">
+                                <a href="<?php echo MODE; ?>/articles/input" >
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     New Article Add
                                 </a>
@@ -205,10 +205,10 @@
                                 <b class="arrow"></b>
                             </li>
 
-                            <li class="">
-                                <a href="form-elements-2.html">
+                            <li class="<?php if( $current_sub == 'view_article' ) echo 'active'; ?>">
+                            <a href="<?php echo MODE; ?>/articles/article_view" >          
                                     <i class="menu-icon fa fa-caret-right"></i>
-                                    Form Elements 2
+                                    Article list view
                                 </a>
 
                                 <b class="arrow"></b>

@@ -13,5 +13,15 @@ Menu Add
 	[ Model ]		: menuModel @mdl_register_new_menu
 
 
-
 Add New Article
+	[ Page ] 		:  view/article/input.php
+	[ Form ] 		:  view/bb_form/article_new_add_frm.php
+	[ Controller ] 	: article @input
+	[ view ] 		: view/article/input.php
+	[ Model ]		: menuModel @mdl_register_new_article
+
+View all Articles
+	[ Page ] 		: view/article/view.php
+	[ Controller ] 	: article @view
+	[ view ] 		: view/article/view.php
+	[ Model ]		: menuModel @mdl_view_article

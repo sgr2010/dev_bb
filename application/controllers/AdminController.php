@@ -51,10 +51,7 @@ class adminController extends Controller{
                
         return $this->view();
         
-    }
+    }   
 
-    
-   
-    
-    
+     
 }

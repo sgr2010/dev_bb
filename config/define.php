@@ -45,6 +45,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 }
 
 
+// Define all TABLE name
+
+define('TBL_ARTICLE','bb_article_main');
 
 ///home/content/79/10545479/html/online/config/images/logo.png
         
@@ -259,87 +262,9 @@ define('MAIL_RESERVE_NOTICE',
 
 
 
-/* システム移行案内 */
-
-//タイトル
-define('MAIL_TITLE_SHIFT_SYSTEM',
-	'【エージェント】システム移行のお知らせ');
-
-//本文
-define('MAIL_TEXT_SHIFT_SYSTEM',
-	'システムのリニューアルに伴い、現在お使いいただいておりますパスワードがお使いいただけなくなります。<br>
-ID:[id]または登録メールアドレスとPW：[pass]でログインしていただき、パスワードの変更を実施してください 。<br><br>
-* IDは今後、お仕事紹介等で必要となるので、忘失なさらないようにお気を付け下さい。');
 
 
 
-//-- ★　ページごとのテキスト（タレント）
-
-//-- page:talent_email_registration
-define('INPUT_EMAIL',
-	'メールアドレスを入力してください');
-define('INPUT_EMAIL_ATTENTION',
-	'* PCメールが届くメールアドレスを入力して下さい<br><br>
-* 受信拒否設定をしている方は、設定を解除して下さい');
-define('MAIL_REGISTERED',
-	'すでに登録済みのメールアドレスです');
-define('MAIL_REGIST_SUCCESS',
-	'登録用のリンクを記載したメールを送信しました。');
-
-//-- page:talent_login_login
-define('LOGIN_ERROR',		'IDとパスワードを正しく入力してください');
-define('LOGOUT_DIALOG',		'ログアウトしますか？');
-
-define('LOGIN_INACTIVE_ERROR', "登録データがありません" );
-
-define('FORGET_PW_SEND_MAIL',			'パスワードを記載したメールを送信しました');
-define('FORGET_PW_NOT_REGIST_MAIL',		'入力されたメールアドレスが存在しません');
-
-//-- page:talent_registration_disabledLink
-define('DISABELED_LINK',		'リンクが存在しません');
-
-//-- page:talent_registration_confirm
-define('PW_DONT_MATCH',			'入力されたパスワードが一致しません');
-
-define('REGIST_SUCCESS',
-	'入力ありがとうございました。<br>タレント登録が完了しました。<br>
-<font color="red"><strong>[name] さんのタレントIDは [id] となります。</font></strong><br><br>
-* IDは今後、お仕事紹介等で必要となるので、忘失なさらないようにお気を付け下さい。');
-
-
-//-- page:talent_login_passforget
-define('TALENT_LOGIN_PASSFORGET_EMAIL_NOT_MATCH',
-	'入力されたメールアドレスは登録されておりません');
-define('TALENT_LOGIN_PASSFORGET_EMAIL_SEND_SUCCESS',
-	'メールを送信しました');
-
-//-- page:tmp_email_change
-define('EMAIL_CHANGE_SEND_MAIL',
-	'メールを送信しました。<br><br>受信メールのリンクをクリックすることで<br><br>更新が完了します。');
-define('EMAIL_CHANGE_SUCCESS',
-	'メールアドレスを変更しました');
-define('EMAIL_CHANGE_MAIL_REGISTED',
-	'入力されたメールアドレスは登録済みとなっております');
-
-
-//-- page:tmp_password_change
-define('PASSWORD_CHANGE_SUCCESS',
-	'パスワードを変更しました');
-define('PASSWORD_CHNEGE_FALSE',
-	'入力情報が正しくありません');
-define('PASSWORD_CHANGE_WRONG_PASSWORD',
-	'パスワードが正しくありません');
-define('PASSWORD_CHANGE_NOT_MATCH',
-	'新パスワードが一致しません');
-
-define('PASSWORD_CHANGE_NOCHANGE',
-	'現在のパスワードと新しいパスワードが同じです');
-
-//-- page:talent_main_hopeShift
-define('FIXED_SCHEDULE',
-	'予定の変更を希望される場合には、以下までご連絡下さい。
-株式会社エージェント
-<a href="tel:03-3780-3911">03-3780-3911</a>');
 
 
 //-- ★　ページごとのテキスト（管理画面）

@@ -59,6 +59,8 @@ class articlesController extends Controller{
         }
 
         if( $mode == "save" ){
+            var_dump($_POST);
+
             $res = $this->_model->mdl_register_new_article( $_POST );             
             if( $res == true ){
                 header( 'location: ../master/master_article_type_view' );
@@ -101,6 +103,33 @@ class articlesController extends Controller{
         $this->view->set( 'page_header_sub_title', $page_header_sub_title );
 
         return $this->view();
+    }
+
+
+    public function article_view(){
+        $res = $this->_model->mdl_view_article();
+          
+            
+        $this->view->set('article_all',$res);
+        
+        $menu = "Article";
+        $menu_sub = "Article View";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Article View";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article" );
+        $this->view->set( 'active_sub', "active" );
+
+        return $this->view();
+
     }
 
 

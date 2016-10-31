@@ -54,9 +54,13 @@ class articlesModel extends Model{
 
 
     public function mdl_register_new_article( $value ){
+
+        $date = explode("-",$value['publish_date']);
+       
+        $value['publish_date'] = $date[2]."-".$date[1]."-".$date[0]; 
+        
          $data = array(
-            'article_tittle'=>$value['article_tittle'],
-            'type_describe'=>$value['article_type_describe'],
+            'article_tittle'=>$value['article_tittle'],            
             'article_type'=>$value['article_type'],
             'article_tag'=>$value['article_tage'],
             'text01'=>$value['content1'],
@@ -68,12 +72,22 @@ class articlesModel extends Model{
         );
         
         // Database Table name 
-        $table ="bb_articles_main";
+        $table ="bb_article_main";
         
         // after data insert return will be boolen Type True / False
         $result = $this->db->insert($data, $table);     
 
        return $result;
+    }
+
+    public function mdl_view_article(){
+        
+        $field = "*";
+        $where = "delete_flag = 0";
+        $result = $this->db->select( $field, TBL_ARTICLE, $where);
+        //var_dump($result);
+        return $result;
+
     }
 
 
