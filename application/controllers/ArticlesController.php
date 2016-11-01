@@ -133,6 +133,63 @@ class articlesController extends Controller{
     }
 
 
+    public function article_view_single( $id = null ){
+
+        $res = $this->_model->get_articles_single_data($id);
+
+       // var_dump($res);
+        $this->view->set('article_single',$res);
+
+        $menu = "Article";
+        $menu_sub = "Article View as Single";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Article View";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article" );
+        $this->view->set( 'active_sub', "active" );
+
+            
+        return $this->view();        
+
+    }
+
+    public function article_view_single_pic_upload( $id = null ){
+
+        $res = $this->_model->get_articles_single_data($id);
+
+       // var_dump($res);
+        $this->view->set('article_single',$res);
+
+        $menu = "Article";
+        $menu_sub = "Article View as Single";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Article View";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article" );
+        $this->view->set( 'active_sub', "active" );
+
+            
+        return $this->view();        
+
+    }
+
+
    
     
 }

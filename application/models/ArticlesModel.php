@@ -90,6 +90,19 @@ class articlesModel extends Model{
 
     }
 
+    public function get_articles_single_data( $id ){
+
+        $field = "*";
+        $where = "id = " . $id;
+       // $result = $this->db->query( $field, TBL_ARTICLE , $where);
+        $result = $this->db->query("SELECT * FROM ". TBL_ARTICLE ." WHERE id='$id'");
+       
+        $raw = mysql_fetch_array($result);
+    
+        return $raw;
+    }
+    
+
 
 
 }
