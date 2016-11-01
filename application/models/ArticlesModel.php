@@ -101,6 +101,20 @@ class articlesModel extends Model{
     
         return $raw;
     }
+
+    public function mdl_update_article($file_name, $id){
+
+        $data = array(
+            'front_img'=>$file_name            
+            
+        );
+        $where = "id =".$id ;
+        $result = $this->db->update($data, TBL_ARTICLE, $wher);
+        return;
+
+
+
+    }
     
 
 

@@ -59,8 +59,6 @@ class articlesController extends Controller{
         }
 
         if( $mode == "save" ){
-            var_dump($_POST);
-
             $res = $this->_model->mdl_register_new_article( $_POST );             
             if( $res == true ){
                 header( 'location: ../master/master_article_type_view' );
@@ -165,6 +163,10 @@ class articlesController extends Controller{
 
         $res = $this->_model->get_articles_single_data($id);
 
+        
+
+
+
        // var_dump($res);
         $this->view->set('article_single',$res);
 
@@ -186,6 +188,35 @@ class articlesController extends Controller{
 
             
         return $this->view();        
+
+    }
+
+
+    public function file_upload( $data = null ){    
+
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            $mode = $_POST['mode'];             
+        }
+
+        if(isset($_FILES["front_img"]["tmp_name"])){      
+            if( $mode == "front_img" ){
+                $target_dir = "./upload/article/";
+                $file_name = md5(uniqid(rand(), true)) .".jpg";
+                $target_file = $target_dir . $file_name;
+
+                if (move_uploaded_file($_FILES["front_img"]["tmp_name"], $target_file)) {
+                    $res = $this->_model->mdl_update_article( $file_name, $_POST['article_id'] ); 
+
+                    header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+                    exit;
+                } 
+            }
+        }
+         
+            header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+            exit;
+        
+
 
     }
 
