@@ -59,8 +59,6 @@ class articlesController extends Controller{
         }
 
         if( $mode == "save" ){
-            var_dump($_POST);
-
             $res = $this->_model->mdl_register_new_article( $_POST );             
             if( $res == true ){
                 header( 'location: ../master/master_article_type_view' );
@@ -129,6 +127,96 @@ class articlesController extends Controller{
         $this->view->set( 'active_sub', "active" );
 
         return $this->view();
+
+    }
+
+
+    public function article_view_single( $id = null ){
+
+        $res = $this->_model->get_articles_single_data($id);
+
+       // var_dump($res);
+        $this->view->set('article_single',$res);
+
+        $menu = "Article";
+        $menu_sub = "Article View as Single";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Article View";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article" );
+        $this->view->set( 'active_sub', "active" );
+
+            
+        return $this->view();        
+
+    }
+
+    public function article_view_single_pic_upload( $id = null ){
+
+        $res = $this->_model->get_articles_single_data($id);
+
+        
+
+
+
+       // var_dump($res);
+        $this->view->set('article_single',$res);
+
+        $menu = "Article";
+        $menu_sub = "Article View as Single";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Article View";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article" );
+        $this->view->set( 'active_sub', "active" );
+
+            
+        return $this->view();        
+
+    }
+
+
+    public function file_upload( $data = null ){    
+
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            $mode = $_POST['mode'];             
+        }
+
+        if(isset($_FILES["front_img"]["tmp_name"])){      
+            if( $mode == "front_img" ){
+                $target_dir = "./upload/article/";
+                $file_name = md5(uniqid(rand(), true)) .".jpg";
+                $target_file = $target_dir . $file_name;
+
+                if (move_uploaded_file($_FILES["front_img"]["tmp_name"], $target_file)) {
+                    $res = $this->_model->mdl_update_article( $file_name, $_POST['article_id'] ); 
+
+                    header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+                    exit;
+                } 
+            }
+        }
+         
+            header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+            exit;
+        
+
 
     }
 

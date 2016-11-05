@@ -146,7 +146,7 @@
                                                     <a href="#"><?php echo $value['id'] ?></a>
                                                 </td>
                                                 <td>
-                                                    <a href="#"><?php echo $value['article_tittle'] ?></a>
+                                                    <a href="javascript:AtricleDataSingle('article','article_view_single','<?php echo $value['id'] ?>');"><?php echo $value['article_tittle'] ?></a>
                                                 </td>
                                                 <td><?php echo $value['article_type'] ?></td>
                                                 <td>
@@ -218,6 +218,14 @@
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
+<script type="text/javascript">
+    
+    function AtricleDataSingle(data1, data2, data3){
+        //alert(data3);
+        document.location.href = data2 + "?id=" + data3;
+
+    }
+</script>
 
 
 
