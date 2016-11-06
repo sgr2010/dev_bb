@@ -227,6 +227,7 @@ class MyHelpers{
 			$result = str_replace(DS.DS, DS, $result);
 			//die($result);
             return $result;
+            //var_dump($result)
         }else{
             return $path;
         }

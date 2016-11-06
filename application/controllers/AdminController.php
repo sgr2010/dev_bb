@@ -31,10 +31,14 @@ class adminController extends Controller{
      */
     public function index($id=null){  
         $Auth = new adminloginController();
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
+
+        // $res = $Auth->iflogin();
+        // if( $res == false){
+        //     // header( 'location: http://bebengal.com/adminlogin/login' );
+        //     header( 'location: '.MODE.'/adminlogin/login' );
+        //     die();
+        // }
+
         $menu = "Dashboard";
         $menu_sub = null;
         $page_header_sub_title = "Home";
