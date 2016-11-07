@@ -23,4 +23,4 @@ $this->layout = '~/views/shared/_defaultLayout.php';
 			</table>			
 		</form>
 	</div>
-</div>
+</div>	

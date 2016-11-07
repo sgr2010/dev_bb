@@ -132,7 +132,7 @@
                                             
                                             <?php 
                                             }else{
-                                                foreach ($article_all as $key => $value) {                                            
+                                                foreach ($article_all as $key => $value) {                                     
                                           
                                             ?>
                                             <tr>
@@ -146,7 +146,7 @@
                                                     <a href="#"><?php echo $value['id'] ?></a>
                                                 </td>
                                                 <td>
-                                                    <a href="#"><?php echo $value['article_title'] ?></a>
+                                                    <a href="#"><?php echo $value['article_tittle'] ?></a>
                                                 </td>
                                                 <td><?php echo $value['article_type'] ?></td>
                                                 <td>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -11,12 +11,10 @@
         <!-- bootstrap & fontawesome -->
         <link rel="stylesheet" href="<?php echo ASSEST_PATH_ADMIN; ?>/css/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo ASSEST_PATH_ADMIN; ?>/font-awesome/4.5.0/css/font-awesome.min.css" />
-
         <!-- page specific plugin styles -->
 
         <!-- text fonts -->
         <link rel="stylesheet" href="<?php echo ASSEST_PATH_ADMIN; ?>/css/fonts.googleapis.com.css" />
-
         <!-- ace styles -->
         <link rel="stylesheet" href="<?php echo ASSEST_PATH_ADMIN; ?>/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
@@ -31,10 +29,8 @@
         <![endif]-->
 
         <!-- inline styles related to this page -->
-
         <!-- ace settings handler -->
         <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace-extra.min.js"></script>
-
         <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
         <!--[if lte IE 8]>
@@ -44,21 +40,10 @@
     </head>
     
     <body class="no-skin">
-
-        <?php
-        // header menu LIST shared
-            include(MyHelpers::UrlContent('~/views/shared/header.php'));
-        // felt menu LIST shared
-          //  include(MyHelpers::UrlContent('~/views/shared/menu_left_test.php'));
-        ?>
-       
-
-        <?php
-            include(MyHelpers::UrlContent('~/views/shared/_menu5.php'));
-
-        ?>
-
-
+    <?php include(MyHelpers::UrlContent('~/views/shared/header.php')); ?>
+    <?php include(MyHelpers::UrlContent('~/views/shared/menu_left_test.php')); ?>      
+            
+           
         <div class="main-content">
             <div class="main-content-inner">
                 <?php 
@@ -71,25 +56,28 @@
                     ?>
                     <!-- /.page-header end -->
                     <div class="row">
-                        <div class="col-xs-12">
-                            <!-- PAGE CONTENT BEGINS -->
-                            <!-- Form list here --> 
+                        <div class="col-xs-12">                   
+                 
+
                         <?php 
-                            //include(MyHelpers::UrlContent('~/views/bb_forms/article_type_new_add_frm.php'));
+                            $this->renderBody();
                         ?>
+
+
                             <!-- Form list end here --> 
                         </div><!-- /.row -->
                     </div><!-- /.page-content -->
                 </div>
             </div>
         </div>
-
         <?php 
             include(MyHelpers::UrlContent('~/views/shared/footer.php'));
         ?>
         
     </body>
 </html>
+
+
 
 
 
@@ -108,15 +96,6 @@
 <![endif]-->
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-
-    window.onload = function() {
-        document.getElementById('myLogout').onclick = function() {
-            document.getElementById('logoout').submit();
-            return false;
-        };
-    };
-
-
 </script>
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>

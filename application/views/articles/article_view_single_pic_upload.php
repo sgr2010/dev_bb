@@ -100,7 +100,7 @@
                                     <div class="col-md-offset-3 col-md-9">
                                         <button class="btn btn-info" type="Submit">
                                             <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>&nbsp; &nbsp; &nbsp;
-                                        <button class="btn" type="reset">
+                                        <button class="btn" type="Cancel"  onclick="window.history.back()">
                                             <i class="ace-icon fa fa-undo bigger-110"></i>Cancel</button>
                                     </div>
                                 </div>
