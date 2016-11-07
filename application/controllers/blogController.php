@@ -7,8 +7,7 @@ class blogController extends Controller {
     }
 	
 	public function index(){      
-		var_dump("expression");
-		exit();
+		
 		$data = $this->_model->read();
 		if(MyHelpers::isAjax()){
 			header('Content-type: application/json');

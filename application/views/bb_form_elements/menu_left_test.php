@@ -361,9 +361,7 @@
                 </div>
             </div><!-- /.navbar-container -->
         </div>
-        <form id="logoout" action="<?php echo MODE; ?>/adminlogin/logout" method="POST" >
-            <input type="hidden" name="mode" value="logout" />
-        </form>
+      
         
         <div class="main-container ace-save-state" id="main-container">
             <script type="text/javascript">

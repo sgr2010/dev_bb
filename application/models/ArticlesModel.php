@@ -26,6 +26,13 @@ class articlesModel extends Model{
         //var_dump($result);
         return $result;
     }
+
+    public function mdl_get_article_type_all(){
+        $field = " id , article_type_title";    
+        $result = $this->db->select( $field, TBL_ARTICLE_TYPE );
+        //var_dump($result);
+        return $result;
+    }
     
     
 
@@ -80,11 +87,12 @@ class articlesModel extends Model{
        return $result;
     }
 
-    public function mdl_view_article(){
+    public function mdl_get_article_all(){
         
         $field = "*";
         $where = "delete_flag = 0";
-        $result = $this->db->select( $field, TBL_ARTICLE, $where);
+        $orderby = " id DESC ";
+        $result = $this->db->select( $field, TBL_ARTICLE, $where, $orderby );
         //var_dump($result);
         return $result;
 
@@ -102,18 +110,18 @@ class articlesModel extends Model{
         return $raw;
     }
 
-    public function mdl_update_article($file_name, $id){
+    /**
+     Front Image Save function
+    **/
+    public function mdl_update_article_front_img($file_name, $id){
 
         $data = array(
-            'front_img'=>$file_name            
-            
+            'front_img'=>$file_name 
         );
-        $where = "id =".$id ;
-        $result = $this->db->update($data, TBL_ARTICLE, $wher);
-        return;
-
-
-
+        
+        $where = "id =".$id ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE, $where );
+        return; // true / false 
     }
     
 

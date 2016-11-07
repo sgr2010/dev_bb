@@ -28,8 +28,8 @@ class adminloginController extends Controller{
         $msg = Null;
 
         if( $this->iflogin() == true ){
-            header( 'location: ../admin/index' );
-            exit;
+            header( "location: ../admin/index" );
+            die();
         }
         
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
@@ -59,8 +59,8 @@ class adminloginController extends Controller{
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $res['user_name'];
                 $_SESSION['admin_id'] = $res['id'];     
-                header( 'location: ../admin/index' );
-                exit;   
+                header( "location: ../admin/index" );
+                die();   
             }
         }        
 
@@ -79,14 +79,16 @@ class adminloginController extends Controller{
     }
 
     public function logout(){
+
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
             $mode = $_POST['mode'];            
         }
-        
-        if( $mode == "logout" ){
+        if( $mode == "logout" ){            
             session_destroy();
-            header( 'location: login' );
-            exit;
+            session_unset();    
+            //header( 'location: http://bebengal.com/adminlogin/login' );
+            header( 'location: '.MODE.'/adminlogin/login' );
+      
         }
 
     }
