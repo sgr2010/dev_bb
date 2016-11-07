@@ -15,37 +15,27 @@ class adminController extends Controller{
     //put your code here
     
    protected function init(){    
-        // $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
-        // $this->cfg['db']['password'], $this->cfg['db']['database']);   
+        $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
+        $this->cfg['db']['password'], $this->cfg['db']['database']);        
+       
+      
     }
-    
-
     /**
      * 
      * @param type $id = error code id
      * @return type
      */
+    public function index($id=null){  
+        $Auth = new adminloginController();
 
-    public function index($id=null){ 
-         
-      if( $_SESSION['loggedin'] == null){         
-        header("Location:  adminlogin/login");
-        exit;
-      }
+         $res = $Auth->iflogin();
+         var_dump( $__DIR__);
+        // if( $res == false){
+        //     // header( 'location: http://bebengal.com/adminlogin/login' );
+        //     header( 'location: '.MODE.'/adminlogin/login' );
+        //     die();
+        // }
 
-
-      // $res = "true"; 
-      //   $Auth = new adminloginController();
-      //     $res = $Auth->iflogin();
-           //header('Location: http://google.com');
-        
-          // if( $res !== true ){
-           
-          //   $locatioUrl = MODE."/adminlogin/login";
-          //   header('Location: http://google.com');
-          //  // header( 'Location: /adminlogin/login' );  
-          //   exit;  
-          // }
         $menu = "Dashboard";
         $menu_sub = null;
         $page_header_sub_title = "Home";
@@ -61,7 +51,7 @@ class adminController extends Controller{
         $this->view->set( 'active', "active" );
                
         return $this->view();
-       
+        
     }   
 
      

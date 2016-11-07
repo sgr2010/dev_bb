@@ -47,14 +47,16 @@ class blogController extends Controller {
 	}
 
 	public function create($author=null, $title=null, $content=null){
-		if($_SERVER["REQUEST_METHOD"]=='POST'){		
-			$id = $this->_model->create($author,$title,$content);
-			if($id !== false){
-				header('Location: /mvc/blog/detail/'.$id);
-				exit;
-			}
-		}
-		return $this->view();
+		header('Location: /blog/index');
+		exit;
+		// if($_SERVER["REQUEST_METHOD"]=='POST'){		
+		// 	$id = $this->_model->create($author,$title,$content);
+		// 	if($id !== false){
+		// 		header('Location: /mvc/blog/detail/'.$id);
+		// 		exit;
+		// 	}
+		// }
+		// return $this->view();
 	}
 	
 	public function delete($id){
@@ -65,5 +67,12 @@ class blogController extends Controller {
 				exit;
 			}
 		}
+	}
+
+	public function test(){
+		 if( $_SESSION['loggedin'] == null){ 
+		        header("Location: adminlogin/login", true);
+        exit();
+      }
 	}
 }

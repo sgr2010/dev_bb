@@ -81,7 +81,8 @@ class adminloginController extends Controller{
                 return false;
             }
         }else{
-            return false;              
+            header( 'location: '.MODE.'/adminlogin/login' );  
+            die();          
         }
     }
 
