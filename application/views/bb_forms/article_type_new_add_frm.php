@@ -1,6 +1,4 @@
 <div class="row">
- <h3 class="header smaller lighter blue"><?php echo "$page_header_sub_title"; ?></h3>
-
     <div class="col-xs-12">
     <!-- PAGE CONTENT BEGINS -->
         <form class="form-horizontal" role="form" name="frm_article_type" method="POST" action="master_article_type_new" >
@@ -33,7 +31,7 @@
     </div><!-- /.row -->
 </div><!-- /.page-content -->
 
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+<!-- <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script> -->
 
 <!-- <![endif]-->
 

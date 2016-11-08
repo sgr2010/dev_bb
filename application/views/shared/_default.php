@@ -37,12 +37,11 @@
         <script src="ace-extra.min.js assets/js/html5shiv.min.js"></script>
         <script src="ace-extra.min.js assets/js/respond.min.js"></script>
         <![endif]-->
-    </head>
-    
+        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+    </head>    
     <body class="no-skin">
-    <?php include(MyHelpers::UrlContent('~/views/shared/header.php')); ?>
-    <?php include(MyHelpers::UrlContent('~/views/shared/_menu5.php')); ?>      
-            
+        <?php include(MyHelpers::UrlContent('~/views/shared/header.php')); ?>
+        <?php include(MyHelpers::UrlContent('~/views/shared/_menu5.php')); ?> 
            
         <div class="main-content">
             <div class="main-content-inner">
@@ -73,7 +72,7 @@
     </body>
 </html>
  <!--[if !IE]> -->
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+
 
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
@@ -84,7 +83,6 @@
             return false;
         };
     };
-
 
 </script>
 

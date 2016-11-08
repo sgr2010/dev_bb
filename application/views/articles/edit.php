@@ -6,10 +6,8 @@ $this->layout = '~/views/shared/_default.php';
 <?php 
     include(MyHelpers::UrlContent('~/views/bb_forms/article_update_frm.php'));
 ?>
-    <!-- Form list end here --> 
-                     
-
-
+       
+<!--[if !IE]> -->
 
 <!-- <![endif]-->
 
@@ -20,7 +18,6 @@ $this->layout = '~/views/shared/_default.php';
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
 
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
@@ -30,9 +27,6 @@ $this->layout = '~/views/shared/_default.php';
 
 <!-- <![endif]-->
 
-<!--[if IE]>
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
-<![endif]-->
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/chosen.jquery.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/autosize.min.js"></script>
@@ -43,8 +37,8 @@ $this->layout = '~/views/shared/_default.php';
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap-datepicker.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap-timepicker.min.js"></script>
-        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/moment.min.js"></script>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap-timepicker.min.js"></script>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/moment.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/daterangepicker.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap-datetimepicker.min.js"></script>
 
@@ -170,7 +164,3 @@ $this->layout = '~/views/shared/_default.php';
     
     });
 </script>
-
-
-
-        

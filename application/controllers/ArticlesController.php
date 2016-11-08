@@ -97,6 +97,7 @@ class articlesController extends Controller{
 
     **/
     public function edit( $request = Null ){
+       
         $mode = " confirm";
         $menu = "Contents";
         $menu_sub = "Article Update";
@@ -115,21 +116,22 @@ class articlesController extends Controller{
 
 
 
-        if( $mode == "save" ){
-            $res = $this->_model->mdl_register_new_article( $_POST );             
+        if( $mode == "update" ){
+            $id_article = $_POST['id'];
+            $res = $this->_model->mdl_update_article( $_POST );  
+       
             if( $res == true ){
-                header( 'location: ../master/master_article_type_view' );
+                $header_1 = MODE."/articles/edit/".$id_article; 
+
+                header( 'location:'.$header_1 );
                 exit;
             }
         }
+          $data = $this->_model->get_articles_single_data($request); 
 
         if( $mode == "edit" ){
-            // Article data by article id
-            $data = $this->_model->get_articles_single_data($_POST['id']);  
-            
+            $data = $this->_model->get_articles_single_data($_POST['id']);              
         }
-
-
         
         $res = $this->_model->get_articles_type();        
         
@@ -231,11 +233,6 @@ class articlesController extends Controller{
     public function article_view_single_pic_upload( $id = null ){
 
         $res = $this->_model->get_articles_single_data($id);
-
-        
-
-
-
        // var_dump($res);
         $this->view->set('article_single',$res);
 

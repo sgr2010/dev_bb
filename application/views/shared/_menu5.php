@@ -128,7 +128,7 @@
 
                                 <ul class="submenu">                                    
                                     <li class="">
-                                        <a href="#">
+                                        <a href="<?php echo MODE; ?>/master/master_article_type_new">
                                             <i class="menu-icon fa fa-plus purple"></i>
                                             Add Article Type
                                         </a>
