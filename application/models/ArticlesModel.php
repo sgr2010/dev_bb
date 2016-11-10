@@ -149,6 +149,16 @@ class articlesModel extends Model{
         $result = $this->db->update( $data, TBL_ARTICLE, $where );
         return $result ; // true / false 
     }
+
+    public function mdl_update_article_status($data1, $data2){
+        $data = array(
+            'article_status'=>$data2 
+        );
+        $where = "id =".$data1 ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE, $where );
+        return $result ; // true / false 
+
+    }
     
 
 

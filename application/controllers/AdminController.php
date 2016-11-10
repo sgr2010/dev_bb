@@ -29,7 +29,7 @@ class adminController extends Controller{
     public function index($id=null){ 
          
       if( $_SESSION['loggedin'] == null){         
-        header("Location:  /adminlogin/login");
+        header("Location:  adminlogin/login");
         exit;
       }
 

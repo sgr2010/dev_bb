@@ -201,6 +201,16 @@ class articlesController extends Controller{
 
     public function article_view_single( $id = null ){
 
+        $mode = "confirm";
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            $mode = $_POST['mode']; 
+        }
+        //var_dump($mode);
+
+        if( $mode == "status_change"){
+            $ret = $this->_model->mdl_update_article_status( $_POST['art_id'], $_POST['status'] ); 
+            $id = $_POST['art_id'];
+        }
         // article type data
         $getArticleType = $this->_model->mdl_get_article_type_all();
         $this->view->set( 'article_type_all', $getArticleType );
