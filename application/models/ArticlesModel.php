@@ -87,6 +87,30 @@ class articlesModel extends Model{
        return $result;
     }
 
+    public function mdl_update_article( $value ){
+
+        $date = explode("-",$value['publish_date']);
+       
+        $value['publish_date'] = $date[2]."-".$date[1]."-".$date[0]; 
+        
+         $data = array(
+            'article_tittle'=>$value['article_tittle'],            
+            'article_type'=>$value['article_type'],
+            'article_tag'=>$value['article_tage'],
+            'text01'=>$value['content1'],
+            'text02'=>$value['content2'],
+            'text03'=>$value['content3'],
+            'date_of_publication'=>$value['publish_date']
+        );
+
+
+        
+        $where = "id =".$value['id'] ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE, $where );
+
+       return $result;
+    }
+
     public function mdl_get_article_all(){
         
         $field = "*";
@@ -110,6 +134,8 @@ class articlesModel extends Model{
         return $raw;
     }
 
+    
+
     /**
      Front Image Save function
     **/
@@ -121,7 +147,17 @@ class articlesModel extends Model{
         
         $where = "id =".$id ; // article id
         $result = $this->db->update( $data, TBL_ARTICLE, $where );
-        return; // true / false 
+        return $result ; // true / false 
+    }
+
+    public function mdl_update_article_status($data1, $data2){
+        $data = array(
+            'article_status'=>$data2 
+        );
+        $where = "id =".$data1 ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE, $where );
+        return $result ; // true / false 
+
     }
     
 

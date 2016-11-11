@@ -4,7 +4,7 @@ Page : Article update Form
 Name : article_update_frm.php
 PAGE CONTENT BEGINS 
 -->
-<form class="form-horizontal" role="form" name="frm_article" method="POST" action="input" >
+<form class="form-horizontal" role="form" name="frm_article" method="POST" action="edit" >
     <div class="form-group">
         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
         <div class="col-sm-9">
@@ -87,6 +87,7 @@ PAGE CONTENT BEGINS
     <div class="space-4"></div>
 
     <input type="hidden" name="mode" value="update" />
+    <input type="hidden" name="id" value="<?php echo ($data["id"]); ?>" />
     <div class="clearfix form-actions">
         <div class="col-md-offset-3 col-md-9">
             <button class="btn btn-info" type="Submit">

@@ -37,12 +37,11 @@
         <script src="ace-extra.min.js assets/js/html5shiv.min.js"></script>
         <script src="ace-extra.min.js assets/js/respond.min.js"></script>
         <![endif]-->
-    </head>
-    
+        <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+    </head>    
     <body class="no-skin">
-    <?php include(MyHelpers::UrlContent('~/views/shared/header.php')); ?>
-    <?php include(MyHelpers::UrlContent('~/views/shared/menu_left_test.php')); ?>      
-            
+        <?php include(MyHelpers::UrlContent('~/views/shared/header.php')); ?>
+        <?php include(MyHelpers::UrlContent('~/views/shared/_menu5.php')); ?> 
            
         <div class="main-content">
             <div class="main-content-inner">
@@ -56,14 +55,10 @@
                     ?>
                     <!-- /.page-header end -->
                     <div class="row">
-                        <div class="col-xs-12">                   
-                 
-
+                        <div class="col-xs-12"> 
                         <?php 
                             $this->renderBody();
                         ?>
-
-
                             <!-- Form list end here --> 
                         </div><!-- /.row -->
                     </div><!-- /.page-content -->
@@ -76,18 +71,20 @@
         
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
  <!--[if !IE]> -->
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-2.1.4.min.js"></script>
+
+
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+
+    window.onload = function() {
+        document.getElementById('myLogout').onclick = function() {
+            document.getElementById('logoout').submit();
+            return false;
+        };
+    };
+
+</script>
 
 <!-- <![endif]-->
 
