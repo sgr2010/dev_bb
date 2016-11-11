@@ -21,15 +21,13 @@ class adminloginModel extends Model{
 
         $data = array(
             'email'=>$value['email'],
-            'user_name'=>$value['user_name'],
-            'pwd'=>$value['pwd']               
-        );
-        
-        // Database Table name 
-        $table ="bb_admin_user";
-        
+            'AdminName'=>$value['user_name'],
+            'pwd'=>$value['pwd'],
+            'RegisterDate'=>date("Y-m-d H:i:s")               
+        );        
+          
         // after data insert return will be boolen Type True / False
-        $result = $this->db->insert($data, $table);
+        $result = $this->db->insert( $data, TBL_ADMIN );
        
 
        return $result;
@@ -40,24 +38,18 @@ class adminloginModel extends Model{
         
         $user_name = $value['user_name'];
         $password = $value['pwd'];
-
-        // Database Table name 
-        $table ="bb_admin_user";
        
-        $result = $this->db->query("SELECT * FROM bb_admin_user WHERE user_name = '$user_name' AND pwd = '$password'" );
+        $result = $this->db->query("SELECT * FROM " .TBL_ADMIN. " WHERE  AdminName = '$user_name' AND pwd = '$password'" );
         //$result = $this->db->query("SELECT COUNT(id) FROM bb_admin_user WHERE user_name = '$user_name' AND pwd = '$password'" );
         $raw = mysql_fetch_array($result);
-        if ( $raw['acc_active']  == 0 ) {
+        if ( $raw['AccActive']  == 0 ) {
            return 0;
-        } if ( $raw['acc_active']  == 1 ) {
+        } if ( $raw['AccActive']  == 1 ) {
            return 1;
         }else{
             //return $this->db->numRows($result);    
             return $raw;   
         }
-         // var_dump( $raw['acc_active']);
-         // exit();
-        
     }
 
 

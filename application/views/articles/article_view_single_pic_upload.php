@@ -11,11 +11,11 @@ $this->layout = '~/views/shared/_default.php';
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="table-header">
-                                    <?php echo $article_single["article_tittle"]; ?>
+                                    <?php echo $article_single["Headline"]; ?>
                                 </div>
               
                                 <span class="profile-picture">
-                                    <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["front_img"]; ?>.jpg" width="100%" >
+                                    <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg" width="100%" >
                                 </span>
                                 <form class="form-horizontal" role="form" name="frm_article_front_pic_upload" method="POST" action="file_upload" enctype="multipart/form-data">
                                 <!-- div.table-responsive -->
@@ -31,7 +31,7 @@ $this->layout = '~/views/shared/_default.php';
                                     </label>
                                 </div>
                                 <input type="hidden" name="mode" value="front_img" />
-                                <input type="hidden" name="article_id" value="<?php echo $article_single["id"]; ?>" />
+                                <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
                                 <div class="clearfix form-actions">
                                     <div class="col-md-offset-3 col-md-9">
                                         <button class="btn btn-info" type="Submit">

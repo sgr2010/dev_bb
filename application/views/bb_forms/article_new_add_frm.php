@@ -27,7 +27,7 @@
             <option value=""></option>
             <?php
             foreach ($articleTypes as $key => $types) {
-                echo "<option value=". $types['id'] .">".$types['article_type_title']."</option>";
+                echo "<option value=". $types['ArticleTypeId'] .">".$types['ArticleTypeName']."</option>";
             }
             ?>                                                   
             </select> 

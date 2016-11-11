@@ -8,7 +8,7 @@ PAGE CONTENT BEGINS
     <div class="form-group">
         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
         <div class="col-sm-9">
-            <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" value="<?php echo ($data["article_tittle"]); ?>" />
+            <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" value="<?php echo ($data["Headline"]); ?>" />
         </div>
     </div>
 
@@ -30,8 +30,8 @@ PAGE CONTENT BEGINS
             <option value=""></option>
             <?php
             foreach ($articleTypes as $key => $types) { ?>
-                <option value="<?php echo $types['id']; ?>" <?php if( $types['id'] == $data["article_type"] ){ 
-                    echo 'selected'; } ?> > <?php echo $types['article_type_title']; ?> </option>
+                <option value="<?php echo $types['ArticleTypeId']; ?>" <?php if( $types['ArticleTypeId'] == $data["ArticleType"] ){ 
+                    echo 'selected'; } ?> > <?php echo $types['ArticleTypeName']; ?> </option>
             <?php
             }
             ?>                                                   
@@ -45,7 +45,7 @@ PAGE CONTENT BEGINS
         <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 1st </label>
         <div class="col-sm-9">                                                                 
             <div>       
-                <textarea id="form-field-11" name="content1" class="autosize-transition form-control"><?php echo ($data["text01"]); ?></textarea>
+                <textarea id="form-field-11" name="content1" class="autosize-transition form-control"><?php echo ($data["Abstract01"]); ?></textarea>
             </div>     
         </div>  
     </div> 
@@ -55,7 +55,7 @@ PAGE CONTENT BEGINS
         <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 2nd </label>
         <div class="col-sm-9">                                                                 
             <div>       
-            <textarea id="form-field-11" name="content2" class="autosize-transition form-control"><?php echo ($data["text02"]); ?></textarea>
+            <textarea id="form-field-11" name="content2" class="autosize-transition form-control"><?php echo ($data["MainText01"]); ?></textarea>
             </div>     
         </div>  
     </div> 
@@ -65,7 +65,7 @@ PAGE CONTENT BEGINS
         <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 3rd </label>
         <div class="col-sm-9">                                                                 
             <div>       
-            <textarea id="form-field-11" name="content3" class="autosize-transition form-control"><?php echo ($data["text03"]); ?></textarea>
+            <textarea id="form-field-11" name="content3" class="autosize-transition form-control"><?php echo ($data["MainText02"]); ?></textarea>
             </div>     
         </div>  
     </div> 
@@ -76,7 +76,7 @@ PAGE CONTENT BEGINS
         <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Publish Date </label>
         <div class="col-sm-9"> 
             <div class="input-group">
-                <input class="form-control date-picker" name="publish_date" id="id-date-picker-1" type="text" value="<?php echo ($data["date_of_publication"]); ?>" data-date-format="yyyy-mm-dd" />
+                <input class="form-control date-picker" name="publish_date" id="id-date-picker-1" type="text" value="<?php echo ($data["PublishedDate"]); ?>" data-date-format="yyyy-mm-dd" />
                 <span class="input-group-addon">
                     <i class="fa fa-calendar bigger-110"></i>
                 </span>

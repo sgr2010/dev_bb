@@ -29,7 +29,6 @@ $this->layout = '~/views/shared/_default.php';
                                                 <th>Title</th>                                                
                                                 <th>Describe</th>
                                                 <th>Status</th>
-                                                <th>Date of Regi</th>   
                                                 <th></th>                                            
                                             </tr>
                                         </thead>
@@ -47,8 +46,7 @@ $this->layout = '~/views/shared/_default.php';
                                                 <td> No record </td>
                                                 <td> No record</td>
                                                 <td> No record </td>
-                                                <td> No record</td>
-                                                <td>No record</td>
+                                              <td>No record</td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs action-buttons">
                                                         <a class="blue" href="#">
@@ -77,16 +75,15 @@ $this->layout = '~/views/shared/_default.php';
                                                     </label>
                                                 </td>   
                                                 <td>
-                                                    <a href="#"><?php echo $value['id'] ?></a>
+                                                    <a href="#"><?php echo $value['ArticleTypeId'] ?></a>
                                                 </td>
                                                 <td>
-                                                    <a href="#"><?php echo $value['article_type_title'] ?></a>
+                                                    <a href="#"><?php echo $value['ArticleTypeName'] ?></a>
                                                 </td>
-                                                <td><?php echo $value['type_describe'] ?></td>
+                                                <td><?php echo $value['Describe'] ?></td>
                                                 <td>
                                                     <span class="label label-sm label-inverse arrowed-in">Flagged</span>
-                                                </td>
-                                                <td><?php echo $value['date_of_regi'] ?></td>
+                                                </td>                                               
                                                 <td>
                                                     <div class="hidden-sm hidden-xs action-buttons">
                                                         <a class="blue" href="#">

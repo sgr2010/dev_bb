@@ -39,6 +39,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 
 define('TBL_ARTICLE','bb_article_main');
 define('TBL_ARTICLE_TYPE','bb_articles_type');
+define('TBL_ADMIN','bb_admin_user');
 
 
 
