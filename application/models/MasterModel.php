@@ -20,9 +20,9 @@ class masterModel extends Model{
     
    public function mdl_register_new_article_type( $value ){    
         $data = array(
-            'article_type_title'=>$value['article_tittle'],
-            'type_describe'=>$value['article_type_describe']             
-        );
+            'ArticleTypeName'=>$value['article_tittle'],
+            'Describe'=>$value['article_type_describe'] 
+                  );
         
         // Database Table name 
         $table ="bb_articles_type";

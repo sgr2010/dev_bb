@@ -5,12 +5,12 @@ $this->layout = '~/views/shared/_default.php';
 <div class="row">
     <div class="col-xs-12">                                
         <div class="table-header">
-            <?php echo "#".$article_single["id"]; ?>
-            <?php echo $article_single["article_tittle"]; ?>
+            <?php echo "#".$article_single["ArticleId"]; ?>
+            <?php echo $article_single["Headline"]; ?>
         </div>              
         <span class="profile-picture">
             <!--  <img src="<?php echo ASSEST_PATH_INDEX; ?>/css/images/banner.jpg" width="100%" > -->
-            <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["front_img"]; ?>.jpg" width="100%" >
+            <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg" width="100%" >
         </span>
         <div class="clearfix"></div>
         <div class="hr dotted"></div>
@@ -33,24 +33,24 @@ $this->layout = '~/views/shared/_default.php';
                         <br />
                         <span class="line-height-1 smaller-90"> Followers </span>
                     </span>
-                    <span class="btn btn-app btn-sm btn-pink no-hover">
-                        <span class="line-height-1 bigger-170"> 4 </span>
-
-                        <br />
-                        <span class="line-height-1 smaller-90"> Projects </span>
-                    </span>
+                   
                     <span class="btn btn-app btn-sm btn-grey no-hover">
                         <span class="line-height-1 bigger-170"> 23 </span>
 
                         <br />
                         <span class="line-height-1 smaller-90"> Reviews </span>
                     </span>
-                    <span class="btn btn-app btn-sm btn-primary no-hover">
-                        <span class="line-height-1 bigger-170"> 55 </span>
+                    <span class="btn btn-app btn-sm btn-grey no-hover">
+                        <span class="line-height-1 bigger-170"> 23 </span>
                         <br />
-                        <span class="line-height-1 smaller-90"> Contacts </span>
+                        <span class="line-height-1 smaller-90"> Reviews </span>
                     </span>
-                    <button class="btn btn-app btn-purple btn-sm" onclick="AtriclePicSingle('article','article_view_single_pic_upload','<?php echo $article_single["id"]; ?>')">
+
+                     <span class="btn btn-app btn-sm btn-pink" onclick="atricleEdit('<?php echo $article_single["ArticleId"]; ?>')" >
+                         <i class="ace-icon fa fa-pencil-square-o "></i>Edit
+                    </span>
+                    
+                    <button class="btn btn-app btn-purple btn-sm" onclick="AtriclePicSingle('article','article_view_single_pic_upload','<?php echo $article_single["ArticleId"]; ?>')">
                         <i class="ace-icon fa fa-cloud-upload bigger-200"></i>Pic Upload
                     </button>
                     <button class="btn btn-app btn-danger btn-sm">
@@ -69,7 +69,7 @@ $this->layout = '~/views/shared/_default.php';
                             <div class="profile-info-name"> Article Title </div>
 
                             <div class="profile-info-value">
-                                <span class="editable" id="username"><?php echo $article_single["article_tittle"]; ?></span>
+                                <span class="editable" id="username"><?php echo $article_single["Headline"]; ?></span>
                             </div>
                         </div>
 
@@ -79,9 +79,9 @@ $this->layout = '~/views/shared/_default.php';
                                 <?php                                                                
                                     foreach ($article_type_all as $type) 
                                     {
-                                        if( $article_single["article_type"] == $type['id'] )
+                                        if( $article_single["ArticleType"] == $type['ArticleTypeId'] )
                                         {
-                                            echo $type['article_type_title'];
+                                            echo $type['ArticleTypeName'];
                                         }
                                     }
                                 ?>
@@ -91,7 +91,7 @@ $this->layout = '~/views/shared/_default.php';
                         <div class="profile-info-row">
                             <div class="profile-info-name"> Published on </div>
                             <div class="profile-info-value">
-                                <span class="editable" id="age"><?php echo $article_single["date_of_publication"]; ?>                                                            
+                                <span class="editable" id="age"><?php echo $article_single["PublishedDate"]; ?>                                                            
                                 </span>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ $this->layout = '~/views/shared/_default.php';
                         <div class="profile-info-row">
                             <div class="profile-info-name"> Tages </div>
                             <div class="profile-info-value">
-                                <span class="editable" id="signup"><?php echo $article_single["article_tag"]; ?></span>
+                                <span class="editable" id="signup"><?php echo $article_single["ArticleTag"]; ?></span>
                             </div>
                         </div>
 
@@ -107,9 +107,10 @@ $this->layout = '~/views/shared/_default.php';
                             <div class="profile-info-name"> Current Status </div>
                             <div class="profile-info-value">
                                 <span class="editable" id="login"><?php 
-                                if( $article_single["article_status"] == 1 ) echo "<i class='ace-icon fa fa-circle green'></i>&nbsp<span class='green'>Active</span>";
-                                if( $article_single["article_status"] == 2 ) echo "<i class='ace-icon fa fa-circle red'></i>&nbsp<span class='red'>Hold</span>";
-                                if( $article_single["article_status"] == 4 ) echo "<i class='ace-icon fa fa-circle grey'></i>&nbsp<span class='grey'>Blocked</span>";
+                                if( $article_single["ArticleStatus"] == 0 ) echo "<i class='ace-icon fa fa-circle blue'></i>&nbsp<span class='blue'>Not Active</span>";
+                                if( $article_single["ArticleStatus"] == 1 ) echo "<i class='ace-icon fa fa-circle green'></i>&nbsp<span class='green'>Active</span>";
+                                if( $article_single["ArticleStatus"] == 2 ) echo "<i class='ace-icon fa fa-circle red'></i>&nbsp<span class='red'>Hold</span>";
+                                if( $article_single["ArticleStatus"] == 3 ) echo "<i class='ace-icon fa fa-circle grey'></i>&nbsp<span class='grey'>Blocked</span>";
                                ?></span>
                             </div>
                             <div class="btn-group">
@@ -118,10 +119,10 @@ $this->layout = '~/views/shared/_default.php';
                                     <i class="ace-icon fa fa-angle-down icon-only"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-yellow">
-                                    <li><a href="#" onclick="atricleStatus( '1' , '<?php echo $article_single["id"]; ?>')" >Active</a></li>
-                                    <li><a href="#" onclick="atricleStatus( '2', '<?php echo $article_single["id"]; ?>')" >Hold</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '1' , '<?php echo $article_single["ArticleId"]; ?>')" >Active</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '2', '<?php echo $article_single["ArticleId"]; ?>')" >Hold</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#" onclick="atricleStatus( '4', '<?php echo $article_single["id"]; ?>')">Blocked</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '3', '<?php echo $article_single["ArticleId"]; ?>')">Blocked</a></li>
                                 </ul>
                             </div><!-- /.btn-group -->
                         </div>
@@ -146,7 +147,7 @@ $this->layout = '~/views/shared/_default.php';
 
                             <div class="widget-body">
                                 <div class="widget-main">
-                                    <?php echo nl2br($article_single["text01"]); ?>
+                                    <?php echo nl2br($article_single["Abstract01"]); ?>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +167,7 @@ $this->layout = '~/views/shared/_default.php';
                             </div>
                             <div class="widget-body">
                                 <div class="widget-main">
-                                    <?php echo nl2br($article_single["text02"]); ?>
+                                    <?php echo nl2br($article_single["MainText01"]); ?>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +188,7 @@ $this->layout = '~/views/shared/_default.php';
 
                             <div class="widget-body">
                                 <div class="widget-main">
-                                    <?php echo nl2br($article_single["text01"]); ?>
+                                    <?php echo nl2br($article_single["MainText02"]); ?>
                                 </div>
                             </div>
                         </div>
@@ -246,6 +247,10 @@ $this->layout = '~/views/shared/_default.php';
             <input type="hidden" id="art_id" name="art_id" value="" />
             <input type="hidden" id="status" name="status" value="" />
     </form>
+         <form name="article_edit" id="article_edit" action="<?php echo MODE; ?>/articles/edit" method="POST" >
+            <input type="hidden" name="mode" value="edit" />
+            <input type="hidden" id="article_id" name="id" value="" />
+        </form>
 </div><!-- /.page-content -->
 </div><!-- /.page-content -->
 
@@ -270,6 +275,13 @@ $this->layout = '~/views/shared/_default.php';
 
     }
 
+    function atricleEdit(data3){
+        document.getElementById('article_id').value = data3 ;       
+        document.getElementById('article_edit').submit();
+        return false;
+    }
+
+
     function atricleStatus(data1, data3){    
         document.getElementById('art_id').value = data3 ;     
         document.getElementById('status').value = data1 ;   
@@ -277,6 +289,8 @@ $this->layout = '~/views/shared/_default.php';
         return false;
     }
 </script>
+
+
 
 
 

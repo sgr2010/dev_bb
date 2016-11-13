@@ -57,18 +57,18 @@ $this->layout = '~/views/shared/_default.php';
                                         </label>
                                     </td>   
                                     <td>
-                                        <a href="#"><?php echo $value['id'] ?></a>
+                                        <a href="#"><?php echo $value['ArticleId'] ?></a>
                                     </td>
                                     <td>
-                                        <a href="javascript:AtricleDataSingle('article','article_view_single','<?php echo $value['id'] ?>');"><?php echo $value['article_tittle'] ?></a>
+                                        <a href="javascript:AtricleDataSingle('article','article_view_single','<?php echo $value['ArticleId'] ?>');"><?php echo $value['Headline'] ?></a>
                                     </td>
                                     <td>
                                         <?php                                                                
                                             foreach ($article_type_all as $type) 
                                             {
-                                                if( $value['article_type'] == $type['id'] )
+                                                if( $value['ArticleType'] == $type['ArticleTypeId'] )
                                                 {
-                                                    echo $type['article_type_title'];
+                                                    echo $type['ArticleTypeName'];
                                                 }
                                             }
                                         ?>                                                                
@@ -76,10 +76,10 @@ $this->layout = '~/views/shared/_default.php';
                                     <td>
                                         <span class="label label-sm label-inverse arrowed-in">Flagged</span>
                                     </td>
-                                    <td><?php echo $value['date_of_publication'] ?></td>
+                                    <td><?php echo $value['PublishedDate'] ?></td>
                                     <td>
                                         <div class="hidden-sm hidden-xs action-buttons">
-                                            <a class="blue" href="#" onclick="atricleEdit('<?php echo $value["id"]; ?>')">
+                                            <a class="blue" href="#" onclick="atricleEdit('<?php echo $value["ArticleId"]; ?>')">
                                                 <i class="ace-icon fa fa-pencil bigger-130" ></i>
                                             </a>                                                              
                                             <a class="red" href="#">

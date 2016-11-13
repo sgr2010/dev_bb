@@ -127,7 +127,7 @@ class articlesController extends Controller{
                 exit;
             }
         }
-          $data = $this->_model->get_articles_single_data($request); 
+        $data = $this->_model->get_articles_single_data($request); 
 
         if( $mode == "edit" ){
             $data = $this->_model->get_articles_single_data($_POST['id']);              

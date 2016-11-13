@@ -56,3 +56,88 @@ CREATE TABLE `deb_bb`.`bb_menu` (
 `update_admin` INT(11) NOT NULL
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_article_main` ( 
+`ArticleId` INT(11) NOT NULL AUTO_INCREMENT , 
+`Headline` VARCHAR(128) NOT NULL , 
+`ArticleType` INT(1) NOT NULL , 
+`ArticleTag` VARCHAR(10) NULL , 
+`Abstract01` TEXT NULL , 
+`MainText01` TEXT NOT NULL , 
+`MainText02` TEXT NOT NULL , 
+`FrontImg` VARCHAR(32) NULL , 
+`ArticleStatus` INT(1) NOT NULL DEFAULT '0' , 
+`PublishedDate` DATETIME NULL , 
+`CreatedDate` DATETIME NULL ,
+`UpdateDate` DATETIME NULL , 
+`CreatedBy` INT(11) NULL , 
+`DeleteFlag` CHAR(1) NOT NULL DEFAULT '0' , 
+`AuthorId` INT(11) NOT NULL , 
+PRIMARY KEY (`ArticleId`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_article_img` ( 
+`ImgId` INT(11) NOT NULL AUTO_INCREMENT , 
+`ArticleId` INT(11) NOT NULL , 
+`ImageType` INT(11) NOT NULL , 
+`img` VARCHAR(32) NULL , 
+`CreatedDate` DATETIME NULL ,
+`CreatedBy` INT(11) NULL , 
+`DeleteFlag` CHAR(1) NOT NULL DEFAULT '0' , 
+PRIMARY KEY (`ImgId`)
+) ENGINE = InnoDB;
+
+
+bbMainDB
+
+
+CREATE TABLE `bbMainDB`.`bb_admin_user` ( 
+	`AdminId` INT NOT NULL AUTO_INCREMENT , 
+	`AdminName` VARCHAR(64) NOT NULL , 
+	`email` VARCHAR(64) NOT NULL , 
+	`pwd` VARCHAR(64) NOT NULL , 
+	`RegisterDate` DATETIME NOT NULL , 
+	`LastLoginDate` DATETIME NULL , 
+	`DeleteFlag` INT NOT NULL DEFAULT '0' , 
+	`per` INT NOT NULL DEFAULT '3' ,
+	`AccActive` INT NOT NULL DEFAULT '0', 
+	PRIMARY KEY (`AdminId`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `bbMainDB`.`bb_articles_type` ( 
+`ArticleTypeId` INT NOT NULL AUTO_INCREMENT , 
+`ArticleTypeName` VARCHAR(56) NOT NULL , 
+`Describe` VARCHAR(56) NOT NULL , 
+`DeleteFlag` INT NOT NULL , 
+PRIMARY KEY (`ArticleTypeId`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_article_main` ( 
+`ArticleId` INT(11) NOT NULL AUTO_INCREMENT , 
+`Headline` VARCHAR(128) NOT NULL , 
+`ArticleType` INT(1) NOT NULL , 
+`ArticleTag` VARCHAR(10) NULL , 
+`Abstract01` TEXT NULL , 
+`MainText01` TEXT NOT NULL , 
+`MainText02` TEXT NOT NULL , 
+`FrontImg` VARCHAR(32) NULL , 
+`ArticleStatus` INT(1) NOT NULL DEFAULT '0' , 
+`PublishedDate` DATETIME NULL , 
+`CreatedDate` DATETIME NULL ,
+`UpdateDate` DATETIME NULL , 
+`CreatedBy` INT(11) NULL , 
+`DeleteFlag` CHAR(1) NOT NULL DEFAULT '0' , 
+`AuthorId` INT(11) NOT NULL , 
+PRIMARY KEY (`ArticleId`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `deb_bb`.`bb_article_img` ( 
+`ImgId` INT(11) NOT NULL AUTO_INCREMENT , 
+`ArticleId` INT(11) NOT NULL , 
+`ImageType` INT(11) NOT NULL , 
+`img` VARCHAR(32) NULL , 
+`CreatedDate` DATETIME NULL ,
+`CreatedBy` INT(11) NULL , 
+`DeleteFlag` CHAR(1) NOT NULL DEFAULT '0' , 
+PRIMARY KEY (`ImgId`)
+) ENGINE = InnoDB;
