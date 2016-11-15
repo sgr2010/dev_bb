@@ -29,7 +29,7 @@ class adminController extends Controller{
         $Auth = new adminloginController();
 
          $res = $Auth->iflogin();
-         var_dump( $__DIR__);
+         // var_dump( $__DIR__);
         // if( $res == false){
         //     // header( 'location: http://bebengal.com/adminlogin/login' );
         //     header( 'location: '.MODE.'/adminlogin/login' );

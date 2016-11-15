@@ -14,6 +14,7 @@
 class articlesModel extends Model{    
     
     protected function init() {
+        //
 
     }
 
@@ -95,7 +96,7 @@ class articlesModel extends Model{
     public function mdl_update_article( $value ){
 
         $date = explode("-",$value['publish_date']);
-       
+             
         $value['publish_date'] = $date[2]."-".$date[1]."-".$date[0]; 
         
          $data = array(
@@ -167,7 +168,6 @@ class articlesModel extends Model{
 
     }
     
-
 
 
 }

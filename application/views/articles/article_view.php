@@ -74,7 +74,12 @@ $this->layout = '~/views/shared/_default.php';
                                         ?>                                                                
                                     </td>
                                     <td>
-                                        <span class="label label-sm label-inverse arrowed-in">Flagged</span>
+                                     <span class="editable" id="login"><?php 
+                                        if( $value["ArticleStatus"] == 0 ) echo "<i class='ace-icon fa fa-circle blue'></i>&nbsp<span class='blue'>Not Active</span>";
+                                        if( $value["ArticleStatus"] == 1 ) echo "<i class='ace-icon fa fa-circle green'></i>&nbsp<span class='green'>Active</span>";
+                                        if( $value["ArticleStatus"] == 2 ) echo "<i class='ace-icon fa fa-circle red'></i>&nbsp<span class='red'>Hold</span>";
+                                        if( $value["ArticleStatus"] == 3 ) echo "<i class='ace-icon fa fa-circle grey'></i>&nbsp<span class='grey'>Blocked</span>";
+                                       ?></span>
                                     </td>
                                     <td><?php echo $value['PublishedDate'] ?></td>
                                     <td>

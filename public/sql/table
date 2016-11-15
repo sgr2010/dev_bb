@@ -141,3 +141,21 @@ CREATE TABLE `deb_bb`.`bb_article_img` (
 `DeleteFlag` CHAR(1) NOT NULL DEFAULT '0' , 
 PRIMARY KEY (`ImgId`)
 ) ENGINE = InnoDB;
+
+// Menu For Front :
+
+1 | Tourist and Tourism 
+2 | Technology and Society
+3 | Money and Business
+4 | India and Politics
+5 | Education and Training
+6 | World and Language
+7 | Classification and Ads
+8 | Biography and Autobiography
+9 | City and Life
+10| Human and Weather
+11| Shop and Market
+12| Villege and Nature
+13| Kids and Mother
+14| Boy and Sports
+15| Love and You

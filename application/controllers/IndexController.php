@@ -24,9 +24,18 @@ class indexController extends Controller{
      * @return type
      */
     public function index($id=null){  
+        $art = new articlesController();
+      
         $this->view->set( 'active' , 1 );
-        return $this->view();
-        
+      
+
+
+
+// New Article 
+  $res = $this->_model->mdl_get_latest_article();
+        $this->view->set( 'data' , $res );
+
+          return $this->view();
     }
     
     
