@@ -87,7 +87,7 @@ PAGE CONTENT BEGINS
     <div class="space-4"></div>
 
     <input type="hidden" name="mode" value="update" />
-    <input type="hidden" name="id" value="<?php echo ($data["id"]); ?>" />
+    <input type="hidden" name="id" value="<?php echo ($data["ArticleId"]); ?>" />
     <div class="clearfix form-actions">
         <div class="col-md-offset-3 col-md-9">
             <button class="btn btn-info" type="Submit">
