@@ -29,7 +29,7 @@ You can be with us. Who knows, you could be here for some great information, whi
                         <div class="4u 12u(mobile)">
 
                             <section>
-                                <h2>Our Top Authors</h2>
+                                <h2>Our Top Article</h2>
                                 <ul class="small-image-list">
                                     <li>
                                         <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic2.jpg" alt="" class="left" /></a>
@@ -112,9 +112,9 @@ You can be with us. Who knows, you could be here for some great information, whi
                             <article class="blog-post">
                                 <h2>Just another article post</h2>
                                 <a class="comments" href="#">33 comments</a>
-                                <a href="#"><img src="<?php echo MODE; ?>/upload/article/<?php echo $data["FrontImg"]; ?>.jpg" width="100%" ></a>
+                                <a href="javascript:AtricleDataSingle('art','tt','<?php echo $data['ArticleId'] ?>');"><img src="<?php echo MODE; ?>/upload/article/<?php echo $data["FrontImg"]; ?>.jpg" width="100%" ></a>
 
-                                <h3><?php echo $data['Headline']; ?></h3>
+                                <h3><a href="javascript:AtricleDataSingle('art','tt','<?php echo $data['ArticleId'] ?>');"><?php echo $data['Headline']; ?></a></h3>
                                 <p><?php echo $data['Abstract01']; ?></p>
                                 <footer class="controls">
                                     <a href="#" class="button">Continue Reading</a>
@@ -126,3 +126,12 @@ You can be with us. Who knows, you could be here for some great information, whi
                 </div>
             </div>
            
+           <script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+
+    function AtricleDataSingle(data1, data2, data3){
+        //alert(data3);
+        document.location.href = data1 + "/" +data2 + "?id=" + data3;
+
+    }    
+  </script>     

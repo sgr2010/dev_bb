@@ -262,6 +262,7 @@ $this->layout = '~/views/shared/_default.php';
 <!--[if IE]>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>

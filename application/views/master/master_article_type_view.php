@@ -80,7 +80,7 @@ $this->layout = '~/views/shared/_default.php';
                                                 <td>
                                                     <a href="#"><?php echo $value['ArticleTypeName'] ?></a>
                                                 </td>
-                                                <td><?php echo $value['Describe'] ?></td>
+                                                <td><?php echo $value['Description'] ?></td>
                                                 <td>
                                                     <span class="label label-sm label-inverse arrowed-in">Flagged</span>
                                                 </td>                                               

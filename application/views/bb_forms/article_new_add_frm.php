@@ -2,9 +2,9 @@
                                 <!-- PAGE CONTENT BEGINS -->
 <form class="form-horizontal" role="form" name="frm_article" method="POST" action="input" >
 <div class="form-group">
-    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Article Title </label>
+    <label class="col-sm-3 control-label no-padding-right" for="form-field-1" > Article Headline </label>
     <div class="col-sm-9">
-        <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" />
+        <input type="text" id="form-field-1" placeholder="Article Title" name="article_tittle" class="form-control" required />
     </div>
 </div>
 
@@ -23,7 +23,7 @@
     <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Type</label>
     <div class="col-sm-9">
    
-            <select class="chosen-select form-control" name="article_type" id="form-field-select-3" data-placeholder="Choose a Article Type...">
+            <select class="chosen-select form-control" name="article_type" id="form-field-select-3" data-placeholder="Choose a Article Type..." required >
             <option value=""></option>
             <?php
             foreach ($articleTypes as $key => $types) {
@@ -40,17 +40,17 @@
 <div class="space-4"></div>
 
 <div class="form-group">
-    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 1st </label>
+    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Abstract </label>
     <div class="col-sm-9">                                                                 
         <div>       
-        <textarea id="form-field-11" name="content1" class="autosize-transition form-control"></textarea>
+        <textarea id="form-field-11" name="content1" class="autosize-transition form-control" required></textarea>
         </div>     
     </div>  
 </div> 
 <div class="space-4"></div>
 
 <div class="form-group">
-    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 2nd </label>
+    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Main Test 1 </label>
     <div class="col-sm-9">                                                                 
         <div>       
         <textarea id="form-field-11" name="content2" class="autosize-transition form-control"></textarea>
@@ -60,7 +60,7 @@
 <div class="space-4"></div>
 
 <div class="form-group">
-    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Content 3rd </label>
+    <label class="col-sm-3 control-label no-padding-right" for="form-field-select-3">Article Main Test 2 </label>
     <div class="col-sm-9">                                                                 
         <div>       
         <textarea id="form-field-11" name="content3" class="autosize-transition form-control"></textarea>

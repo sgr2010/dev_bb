@@ -27,18 +27,28 @@ class articlesController extends Controller{
      * @return type
      */
     public function index($id=null){  
+        // check login or not    
+        if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) ){         
+            $loca = MODE."/adminlogin/login";     
+            header("Location:  $loca");
+            exit;
+        }
         $Auth = new AdminloginController();
 
         $res = $this->_model->get_articles_type();
 
-        if( $Auth->iflogin() != true ){
-            header( 'location: adminlogin/login' );
-            exit;
-        }
+        
         return $this->view();
     }
 
      public function input( $request = Null ){
+        // check login or not    
+        if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) ){         
+            $loca = MODE."/adminlogin/login";     
+            header("Location:  $loca");
+            exit;
+        }
+   
         $mode = " confirm";
         $menu = "Contents";
         $menu_sub = "New Article Add";
@@ -169,6 +179,10 @@ class articlesController extends Controller{
 
 
     public function article_view(){
+        if( $_SESSION['loggedin'] == null){         
+            header("Location:  adminlogin/login");
+            exit;
+        }
 
         $getArticleType = $this->_model->mdl_get_article_type_all();
         $this->view->set( 'article_type_all', $getArticleType );

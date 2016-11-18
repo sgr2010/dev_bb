@@ -96,7 +96,7 @@
 </script>
 
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
+<!-- <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script> -->
 
 
 
