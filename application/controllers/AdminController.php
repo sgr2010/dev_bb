@@ -28,8 +28,9 @@ class adminController extends Controller{
 
     public function index($id=null){ 
          
-      if( $_SESSION['loggedin'] == null){         
-        header("Location:  adminlogin/login");
+      if( $_SESSION['loggedin'] == null){    
+        $loca = MODE."/adminlogin/login";     
+        header("Location:  $loca");
         exit;
       }
 

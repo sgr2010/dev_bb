@@ -11,7 +11,7 @@
  *
  * @author SGR
  */
-class articlesModel extends Model{    
+class artModel extends Model{    
     
     protected function init() {
         //

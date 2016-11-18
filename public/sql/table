@@ -159,3 +159,12 @@ PRIMARY KEY (`ImgId`)
 13| Kids and Mother
 14| Boy and Sports
 15| Love and You
+
+Posting Article view from Index
+1. for article => art
+	I. 	for Tourist and Tourism 	=> tt
+	II 	for Technology and Society 	=> ts
+	III for Money and Business 		=> mb
+	IV 	for India and Politics 		=> ip
+	V 	for Education and Training 	=> et
+	VI 	for World and Language 		=> wl

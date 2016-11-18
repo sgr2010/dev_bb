@@ -92,12 +92,11 @@ PAGE CONTENT BEGINS
         <div class="col-md-offset-3 col-md-9">
             <button class="btn btn-info" type="Submit">
                 <i class="ace-icon fa fa-check bigger-110"></i>Update</button>&nbsp; &nbsp; &nbsp;
-            <button class="btn" type="Cancel">
+            <button class="btn" onclick="AtricleDataSingle('article','article_view_single','<?php echo $data["ArticleId"]; ?>')" type="button">
                 <i class="ace-icon fa fa-undo bigger-110"></i>Cancel</button>
         </div>
     </div>
 </form>
-
 
 
 

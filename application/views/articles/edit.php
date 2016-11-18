@@ -1,11 +1,52 @@
 <?php 
 $this->layout = '~/views/shared/_default.php';
 ?>
+<div class="center">
+    <span class="btn btn-app btn-sm btn-light no-hover">
+        <span class="line-height-1 bigger-170 blue"> 1,411 </span><br />
+        <span class="line-height-1 smaller-90"> Views </span>
+    </span>
+    <span class="btn btn-app btn-sm btn-yellow no-hover">
+        <span class="line-height-1 bigger-170"> 32 </span>
 
+        <br />
+        <span class="line-height-1 smaller-90"> Followers </span>
+    </span>
+   
+    <span class="btn btn-app btn-sm btn-grey no-hover">
+        <span class="line-height-1 bigger-170"> 23 </span>
+
+        <br />
+        <span class="line-height-1 smaller-90"> Reviews </span>
+    </span>
+    <span class="btn btn-app btn-sm btn-grey no-hover">
+        <span class="line-height-1 bigger-170"> 23 </span>
+        <br />
+        <span class="line-height-1 smaller-90"> Reviews </span>
+    </span>
+
+    <button class="btn btn-app btn-sm btn-yellow" onclick="link('article')">
+        <i class="ace-icon fa fa-pencil-square-o "></i>Add New
+    </button>
+
+    
+    <button class="btn btn-app btn-purple btn-sm" onclick="AtriclePicSingle('article','article_view_single_pic_upload','<?php echo $data["ArticleId"]; ?>')">
+        <i class="ace-icon fa fa-cloud-upload bigger-200"></i>Pic Upload
+    </button>
+    <button class="btn btn-app btn-danger btn-sm">
+    <i class="ace-icon fa fa-trash-o bigger-200"></i>Delete
+    </button>
+</div>
+<div class="space-4"></div>
+<div class="space-4"></div>
     <!-- Form list here --> 
 <?php 
     include(MyHelpers::UrlContent('~/views/bb_forms/article_update_frm.php'));
 ?>
+<form name="article_edit" id="article_edit" action="<?php echo MODE; ?>/articles/edit" method="POST" >
+    <input type="hidden" name="mode" value="edit" />
+    <input type="hidden" id="article_id" name="id" value="" />
+</form>
        
 <!--[if !IE]> -->
 
@@ -18,16 +59,9 @@ $this->layout = '~/views/shared/_default.php';
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 
-
-
-<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/bootstrap-tag.min.js"></script>
 
-
-
 <!-- <![endif]-->
-
-
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/chosen.jquery.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/autosize.min.js"></script>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.inputlimiter.min.js"></script>
@@ -163,4 +197,16 @@ $this->layout = '~/views/shared/_default.php';
         });
     
     });
+</script>
+<script type="text/javascript">
+    
+    function AtricleDataSingle(data1, data2, data3){
+        //alert(data3);
+        document.location.href = data2 + "?id=" + data3;
+    }
+
+    function AtriclePicSingle(data1, data2, data3){
+        //alert(data3);
+        document.location.href = data2 + "?id=" + data3;
+    }
 </script>

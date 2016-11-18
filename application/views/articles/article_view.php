@@ -1,6 +1,7 @@
 <?php 
 $this->layout = '~/views/shared/_default.php';
 ?>
+<script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/ace.min.js"></script> 
 <div class="row">
     <div class="col-xs-12">
         <div class="table-header">
@@ -106,9 +107,12 @@ $this->layout = '~/views/shared/_default.php';
             <input type="hidden" id="art_id" name="id" value="" />
         </form>
 
+
+
 <!--[if IE]>
 <script src="<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
+
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo ASSEST_PATH_ADMIN; ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 
@@ -130,3 +134,4 @@ $this->layout = '~/views/shared/_default.php';
         };
     };
 </script>        
+
