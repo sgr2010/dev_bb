@@ -132,7 +132,7 @@ $this->layout = '~/views/shared/_default.php';
                     <div class="widget-box transparent">
                         <div class="widget-box">
                             <div class="widget-header widget-header-flat">
-                                <h4 class="widget-title smaller">Contents ONE</h4>
+                                <h4 class="widget-title smaller">Abstract</h4>
                                 <div class="widget-toolbar">
                                     <label>
                                         <small class="green">
@@ -153,7 +153,7 @@ $this->layout = '~/views/shared/_default.php';
                         </div>
                         <div class="widget-box">
                             <div class="widget-header widget-header-flat">
-                                <h4 class="widget-title smaller">Contents TWO</h4>
+                                <h4 class="widget-title smaller">Contents Text One</h4>
                                 <div class="widget-toolbar">
                                     <label>
                                         <small class="green">
@@ -173,7 +173,7 @@ $this->layout = '~/views/shared/_default.php';
                         </div>
                         <div class="widget-box">
                             <div class="widget-header widget-header-flat">
-                                <h4 class="widget-title smaller">Contents THREE</h4>
+                                <h4 class="widget-title smaller">Contents Text Two</h4>
                                 <div class="widget-toolbar">
                                     <label>
                                         <small class="green">

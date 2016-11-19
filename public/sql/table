@@ -122,7 +122,7 @@ CREATE TABLE `deb_bb`.`bb_article_main` (
 `MainText02` TEXT NOT NULL , 
 `FrontImg` VARCHAR(32) NULL , 
 `ArticleStatus` INT(1) NOT NULL DEFAULT '0' , 
-`PublishedDate` DATETIME NULL , 
+`PublishedDate` DATE NULL , 
 `CreatedDate` DATETIME NULL ,
 `UpdateDate` DATETIME NULL , 
 `CreatedBy` INT(11) NULL , 
