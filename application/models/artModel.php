@@ -135,6 +135,26 @@ class artModel extends Model{
         return $raw;
     }
 
+    // Get Latest 2 Records
+    public function get_articles_latest_data( $id )
+    {
+         $field = "*";
+        // $where = "WHERE NOT ArticleId='$id' AND `DeleteFlag` = 0 AND `ArticleStatus` = ";
+         $orderby = " ArticleId DESC ";
+        // $result = $this->db->select( $field, TBL_ARTICLE, $where, $orderby );
+
+
+        //$field = "*";
+        //$where = "ArticleId = " . $id;
+       // $result = $this->db->query( $field, TBL_ARTICLE , $where);
+        //$result = $this->db->select( "SELECT * FROM ". TBL_ARTICLE ." WHERE NOT ArticleId='$id' AND `DeleteFlag` = 0 AND `ArticleStatus` = 1 ORDER BY `ArticleId` DESC LIMIT 2 " );
+
+        $result = $this->db->select( $field, TBL_ARTICLE, ' NOT ArticleId='.$id.' AND `DeleteFlag` = 0 AND `ArticleStatus` = 1', $orderby , '2');
+       
+       // $raw = mysql_fetch_array($result);
+
+        return $result;
+    }
     
 
     /**

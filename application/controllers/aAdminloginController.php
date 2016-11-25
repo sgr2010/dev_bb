@@ -23,8 +23,11 @@ class adminloginController extends Controller{
      * @param type $id = error code id
      * @return type
      */
-    public function login(  ){  
+    public function login( $request = Null ){  
         $mode = "confirm";
+        $url = $request;
+        var_dump($url);
+        exit();
         $msg = Null;
         if(isset($_SESSION['loggedin'])){
             if( $_SESSION['loggedin']== true ){                
