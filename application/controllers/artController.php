@@ -29,9 +29,13 @@ class artController extends Controller{
 
     public function tt( $id )
     {
+        // single artticle GET
         $res = $this->_model->get_articles_single_data( $id );
         $this->view->set( 'data' , $res );
 
+        // get latest Article
+        $ls_data = $this->_model->get_articles_latest_data( $id );
+        $this->view->set( 'latest_data' , $ls_data );
 
         $this->view->set( 'active' , 2 );
         return $this->view();

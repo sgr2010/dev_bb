@@ -28,17 +28,27 @@ class articlesController extends Controller{
      */
     public function index($id=null){  
         // check login or not    
-        if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) ){         
-            $loca = MODE."/adminlogin/login";     
+        // if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) ){         
+        //     $loca = MODE."/adminlogin/login";     
+        //     header("Location:  $loca");
+        //     exit;
+        // }
+        // $Auth = new AdminloginController();
+        // $res = $this->_model->get_articles_type();        
+        // return $this->view();
+
+        if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) )
+        {
+            //header( 'location: /login/?r=' . urlencode( $_SERVER['REQUEST_URI'] ) );
+            $loca = MODE."/adminlogin/login/?r=". urlencode( $_SERVER['REQUEST_URI'] );     
+            header("Location:  $loca");
+            exit;
+        }else{
+            $loca = MODE."/articles/article_view";     
             header("Location:  $loca");
             exit;
         }
-        $Auth = new AdminloginController();
 
-        $res = $this->_model->get_articles_type();
-
-        
-        return $this->view();
     }
 
      public function input( $request = Null ){
