@@ -96,6 +96,7 @@
                                                             <span class="bigger-110">Login</span>
                                                         </button>
                                                         <input type="hidden" name="mode" value="dologin" >
+                                                        <input type="hidden" name="url" value="<?php echo $url; ?>" >
                                                     </div>
 
                                                     <div class="space-4"></div>

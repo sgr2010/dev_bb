@@ -23,8 +23,9 @@ class adminloginController extends Controller{
      * @param type $id = error code id
      * @return type
      */
-    public function login(  ){  
+    public function login(  $request = Null ){  
         $mode = "confirm";
+        $url = $request;
         $msg = Null;
         if(isset($_SESSION['loggedin'])){
             if( $_SESSION['loggedin']== true ){                
@@ -58,15 +59,19 @@ class adminloginController extends Controller{
             }else if( $res == 0 ){
                 $msg = "<span style='color: red';>You are not registered user !</span>";
             }else{
+                $url = $request;
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $res['AdminName'];
-                $_SESSION['admin_id'] = $res['AdminId'];     
-                header( "location: ../admin/index" );
+                $_SESSION['admin_id'] = $res['AdminId'];
+                
+                $loca = $_POST['url'];     
+                header("Location:  $loca");
                 die();   
             }
         }        
 
         $this->view->set( 'msg' , $msg );
+        $this->view->set( 'url' , $url );
         return $this->view();
         
     }
