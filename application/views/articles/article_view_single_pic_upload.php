@@ -1,26 +1,31 @@
 <?php 
 $this->layout = '~/views/shared/_default.php';
 ?>
-<div class="row">
+<div class="row">    
     <div class="col-xs-12">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="table-header">
-                    <?php echo $article_single["Headline"]; ?>
-                </div>
-
-                <span class="profile-picture">
-                    <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg" width="100%" >
-                </span>
+        <div class="table-header">
+            <?php echo $article_single["Headline"]; ?>
+        </div>
+        <div>
+        <span class="profile-picture">
+            <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg"  >
+        </span>
+         <span class="profile-picture">
+            <img src="<?php echo MODE; ?>/upload/article/icon.jpg" ><br>
+            <img src="<?php echo MODE; ?>/upload/article/icon.jpg" >
+            <!-- <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["icon"]; ?>.jpg" > -->
+        </span>         
+        </div>
+        <div class="col-sm-4">
+            <div class="widget-box">
                 <form class="form-horizontal" role="form" name="frm_article_front_pic_upload" method="POST" action="file_upload" enctype="multipart/form-data">
-                <!-- div.table-responsive -->
-                    <div class="space-6"></div>                                    
+                <!-- div.table-responsive -->                    
+                    <span class="label label-danger arrowed-in">Front Picture Upload</span>                                    
                     <div class="form-group">
                         <div class="col-xs-12">
                             <input multiple="" type="file" id="id-input-file-3" name="front_img" />
                         </div>
                     </div>
-
                     <input type="hidden" name="mode" value="front_img" />
                     <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
                     <div class="clearfix form-actions">
@@ -32,61 +37,56 @@ $this->layout = '~/views/shared/_default.php';
                         </div>
                     </div>
                 </form>
-
-                <div class="hr hr12 dotted"></div>
-            </div>                
-            <div class="space-20"></div>
-
-            <div class="col-sm-4">
-                <div class="widget-box">
-                    <form class="form-horizontal" role="form" name="frm_article_icon_upload" method="POST" action="file_upload" enctype="multipart/form-data">
-                        <!-- div.table-responsive -->
-                        <div class="space-6"></div> 
-                        <label>Small Icone Pic Upload</label>                                   
-                        <div class="form-group">
-                            <div class="col-xs-12">
-                                <input multiple="" type="file" id="id-input-file-4" name="icon_img" />
-                            </div>
-                        </div>
-                        <input type="hidden" name="mode" value="front_img" />
-                        <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
-                        <div class="clearfix form-actions">
-                            <div class="col-md-offset-3 col-md-9">
-                                <button class="btn btn-info" type="Submit">
-                                <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>&nbsp; &nbsp; &nbsp;
-                                <button class="btn" type="Cancel"  onclick="window.history.back()">
-                                <i class="ace-icon fa fa-undo bigger-110"></i>Cancel</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
-            <div class="col-sm-4">
-                <div class="widget-box">
-                    <form class="form-horizontal" role="form" name="frm_article_icon_upload" method="POST" action="file_upload" enctype="multipart/form-data">
-                        <!-- div.table-responsive -->
-                        <div class="space-6"></div> 
-                        <label>Micro Icone Pic Upload</label>                                   
-                        <div class="form-group">
-                            <div class="col-xs-12">
-                                <input multiple="" type="file" id="id-input-file-5" name="icon_img" />
-                            </div>
+        </div>  
+        <div class="col-sm-4">
+            <div class="widget-box">
+                <form class="form-horizontal" role="form" name="frm_article_icon_upload" method="POST" action="file_upload" enctype="multipart/form-data">
+                    <!-- div.table-responsive -->
+                    <span class="label label-danger arrowed-in">Small Icone Pic Upload</span>                                        
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input multiple="" type="file" id="id-input-file-4" name="icon_img" />
                         </div>
-                        <input type="hidden" name="mode" value="front_img" />
-                        <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
-                        <div class="clearfix form-actions">
-                            <div class="col-md-offset-3 col-md-9">
-                                <button class="btn btn-info" type="Submit">
-                                <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>&nbsp; &nbsp; &nbsp;
-                                <button class="btn" type="Cancel"  onclick="window.history.back()">
-                                <i class="ace-icon fa fa-undo bigger-110"></i>Cancel</button>
-                            </div>
+                    </div>
+                    <input type="hidden" name="mode" value="small_icon_img" />
+                    <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
+                    <div class="clearfix form-actions">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button class="btn btn-info" type="Submit">
+                            <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-            <!-- table list end here --> 
-        </div><!-- /.row -->
+        </div>
+        <div class="col-sm-4">
+            <div class="widget-box">
+                <form class="form-horizontal" role="form" name="frm_article_icon_upload" method="POST" action="file_upload" enctype="multipart/form-data">
+                    <!-- div.table-responsive -->    
+                    <span class="label label-danger arrowed-in">Micro Icone Pic Upload</span>                             
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input multiple="" type="file" id="id-input-file-5" name="icon_img" />
+                        </div>
+                    </div>
+                    <input type="hidden" name="mode" value="micro_icon_img" />
+                    <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
+                    <div class="clearfix form-actions">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button class="btn btn-info" type="Submit">
+                            <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!-- /.row -->
+        <div class="space-20"></div>
+        <div class="hr hr12 dotted"></div>
+        <div class="space-20"></div>
+        <button class="btn btn-danger btn-block" type="button"  onclick="window.history.back()">Get Back</button>
+            <!-- table list end here -->         
     </div><!-- /.page-content -->
 </div><!-- /.row -->
              

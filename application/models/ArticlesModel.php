@@ -152,6 +152,21 @@ class articlesModel extends Model{
         return $result ; // true / false 
     }
 
+    /**
+     Front Image Save function
+    **/
+    public function mdl_update_article_icon_img($file_name, $id){
+
+        $data = array(
+            'img'=>$file_name,
+            'ImageType' => "2", // 2 for Small image
+            'CreatedDate' => date("Y-m-d H:i:s")
+        );
+        
+        $result = $this->db->insert( $data, TBL_ARTICLE );   
+        return $result ; // true / false 
+    }
+
     /*
     Update Article Status
     Input:
