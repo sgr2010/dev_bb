@@ -7,14 +7,17 @@ $this->layout = '~/views/shared/_default.php';
             <?php echo $article_single["Headline"]; ?>
         </div>
         <div>
-        <span class="profile-picture">
-            <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg"  >
-        </span>
-         <span class="profile-picture">
-            <img src="<?php echo MODE; ?>/upload/article/icon.jpg" ><br>
-            <img src="<?php echo MODE; ?>/upload/article/icon.jpg" >
-            <!-- <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["icon"]; ?>.jpg" > -->
-        </span>         
+            <span class="profile-picture" style:width=100px, height=100px;>
+                <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["FrontImg"]; ?>.jpg" style:width=700px, height=200px; >
+            </span>
+            <div class="col-sm-2">
+                <div class="widget-box">
+                    <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["SmallImg"]; ?>" style:width=150px, height=100px;>
+                </div>
+                <div class="widget-box">           
+                    <img src="<?php echo MODE; ?>/upload/article/<?php echo $article_single["IconImg"]; ?>" style:width=50px, height=50px;>
+                </div>
+            </div>               
         </div>
         <div class="col-sm-4">
             <div class="widget-box">
@@ -31,9 +34,7 @@ $this->layout = '~/views/shared/_default.php';
                     <div class="clearfix form-actions">
                         <div class="col-md-offset-3 col-md-9">
                             <button class="btn btn-info" type="Submit">
-                            <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>&nbsp; &nbsp; &nbsp;
-                            <button class="btn" type="Cancel"  onclick="window.history.back()">
-                            <i class="ace-icon fa fa-undo bigger-110"></i>Cancel</button>
+                            <i class="ace-icon fa fa-check bigger-110"></i>Upload & Save</button>                           
                         </div>
                     </div>
                 </form>
@@ -46,7 +47,7 @@ $this->layout = '~/views/shared/_default.php';
                     <span class="label label-danger arrowed-in">Small Icone Pic Upload</span>                                        
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input multiple="" type="file" id="id-input-file-4" name="icon_img" />
+                            <input multiple="" type="file" id="id-input-file-4" name="small_img" />
                         </div>
                     </div>
                     <input type="hidden" name="mode" value="small_icon_img" />
@@ -70,7 +71,7 @@ $this->layout = '~/views/shared/_default.php';
                             <input multiple="" type="file" id="id-input-file-5" name="icon_img" />
                         </div>
                     </div>
-                    <input type="hidden" name="mode" value="micro_icon_img" />
+                    <input type="hidden" name="mode" value="icon_img" />
                     <input type="hidden" name="article_id" value="<?php echo $article_single["ArticleId"]; ?>" />
                     <div class="clearfix form-actions">
                         <div class="col-md-offset-3 col-md-9">
