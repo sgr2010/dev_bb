@@ -304,6 +304,7 @@ class articlesController extends Controller{
             $mode = $_POST['mode'];             
         }
 
+        // front picture upload
         if(isset($_FILES["front_img"]["tmp_name"])){      
             if( $mode == "front_img" ){
                 $target_dir = "./upload/article/";
@@ -317,11 +318,40 @@ class articlesController extends Controller{
                 } 
             }
         }
-         
-            header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
-            exit;
-        
 
+        // front Small picture upload
+        if( $mode == "small_icon_img" ){
+            if(isset($_FILES["small_img"]["tmp_name"])){             
+                $target_dir = "./upload/article/";
+                $file_name = md5(uniqid(rand(), true)) .".jpg";
+                $target_file = $target_dir . $file_name;
+
+                if (move_uploaded_file($_FILES["small_img"]["tmp_name"], $target_file)) 
+                {
+                    $res = $this->_model->mdl_update_article_small_img( $file_name, $_POST['article_id'] ); 
+                    header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+                    exit;
+                } 
+            }
+        }
+        // front Small picture upload
+        if( $mode == "icon_img" ){
+            if(isset($_FILES["icon_img"]["tmp_name"])){             
+                $target_dir = "./upload/article/";
+                $file_name = md5(uniqid(rand(), true)) .".jpg";
+                $target_file = $target_dir . $file_name;
+                
+                if (move_uploaded_file($_FILES["icon_img"]["tmp_name"], $target_file)) 
+                {
+                    $res = $this->_model->mdl_update_article_icon_img( $file_name, $_POST['article_id'] ); 
+                    header( 'location: article_view_single_pic_upload?id='.$_POST['article_id'] );
+                    exit;
+                } 
+            }
+        }
+         
+
+        return;
 
     }
 
