@@ -18,7 +18,7 @@ $this->layout = '~/views/shared/_defaultIndex.php';
                                 <?php
                                     foreach ($latest_data as $data) { ?>
                                     <li>
-                                        <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic2.jpg" alt="" class="left" /></a>
+                                        <a href="#"><img src="<?php echo MODE; ?>/upload/article/<?php echo $data["IconImg"]; ?>" alt="" class="left" /></a>
                                         <h4><?php echo $data['Headline'] ?></h4>
                                         <p><?php echo $data['Abstract01'] ?></p>
                                     </li>    

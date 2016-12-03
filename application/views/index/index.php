@@ -88,27 +88,20 @@ $this->layout = '~/views/shared/_defaultIndex.php';
                         <h2>Latest articles are comming!</h2>
                         <p>New and Latest articles are coming soon. We will published these bellow article as soon as possible.</p>
                         <ul class="big-image-list">
-                            <li>
-                                <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic3.jpg" alt="" class="left" /></a>
-                                <h3>Latest Articles title</h3>
-                               <p>Test test. testtesttesttesttesttest test testtest  test testtest test testtest test testtest test testtest
-                                 test testtest test testtest test testtest test testtest test testtest
-                                  test testtest test testtest. </p>
+                        <?php 
+                            foreach ($comingArticleData as $data) 
+                            { 
+                                ?>
+                                <li>
+                                <img src="<?php echo MODE; ?>/upload/article/<?php echo $data["SmallImg"]; ?>" alt="" class="left" />
+                                <h3><?php echo $data['Headline']; ?></h3>
+                               <p><?php echo $data['Abstract01']; ?></p>
                             </li>
-                            <li>
-                                <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic4.jpg" alt="" class="left" /></a>
-                                <h3>Latest Articles title</h3>
-                                <p>Test test. testtesttesttesttesttest test testtest  test testtest test testtest test testtest test testtest
-                                 test testtest test testtest test testtest test testtest test testtest
-                                  test testtest test testtest. </p>
-                            </li>
-                            <li>
-                                <a href="#"><img src="<?php echo ASSEST_PATH_INDEX; ?>/images/pic5.jpg" alt="" class="left" /></a>
-                                <h3>Latest Articles title</h3>
-                                <p>Test test. testtesttesttesttesttest test testtest  test testtest test testtest test testtest test testtest
-                                 test testtest test testtest test testtest test testtest test testtest
-                                  test testtest test testtest.</p>
-                            </li>
+                                
+                        <?php
+                            }
+                            unset($data);
+                        ?>   
                         </ul>
                     </section>
 
@@ -118,10 +111,10 @@ $this->layout = '~/views/shared/_defaultIndex.php';
                     <article class="blog-post">
                         <h2>Just another article post</h2>
                         <a class="comments" href="#">33 comments</a>
-                        <a href="javascript:AtricleDataSingle('art','tt','<?php echo $data['ArticleId'] ?>');"><img src="<?php echo MODE; ?>/upload/article/<?php echo $data["FrontImg"]; ?>.jpg" width="100%" ></a>
+                        <a href="javascript:AtricleDataSingle('art','tt','<?php echo $data1['ArticleId'] ?>');"><img src="<?php echo MODE; ?>/upload/article/<?php echo $data1["FrontImg"]; ?>.jpg" width="100%" ></a>
 
-                        <h3><a href="javascript:AtricleDataSingle('art','tt','<?php echo $data['ArticleId'] ?>');"><?php echo $data['Headline']; ?></a></h3>
-                        <p><?php echo $data['Abstract01']; ?></p>
+                        <h3><a href="javascript:AtricleDataSingle('art','tt','<?php echo $data1['ArticleId'] ?>');"><?php echo $data1['Headline']; ?></a></h3>
+                        <p><?php echo $data1['Abstract01']; ?></p>
                         <footer class="controls">
                             <a href="#" class="button">Continue Reading</a>
                         </footer>
