@@ -14,13 +14,20 @@ CREATE TABLE `deb_bb`.`bb_admin_user` (
 	PRIMARY KEY (`id`)
 	) ENGINE = InnoDB;
 
-CREATE TABLE `deb_bb`.`bb_articles_type` ( 
-`id` INT NOT NULL AUTO_INCREMENT , 
-`article_type_title` VARCHAR(56) NOT NULL , 
-`type_describe` VARCHAR(56) NOT NULL , 
-`delete_flag` INT NOT NULL , 
-PRIMARY KEY (`id`)
+
+// Article Type Table
+CREATE TABLE `deb_bb`.`bb_article_type` ( 
+`ArticleTypeId` INT NOT NULL AUTO_INCREMENT , 
+`ArticleTypeName` VARCHAR(56) NOT NULL , 
+`Description` VARCHAR(56) NOT NULL , 
+`TypeStatus` INT(1) NOT NULL DEFAULT '0' , 
+`DeleteFlag` INT NOT NULL , 
+`CreatedDate` DATETIME NULL ,
+PRIMARY KEY (`ArticleTypeId`)
 ) ENGINE = InnoDB;
+
+
+
 
 CREATE TABLE `deb_bb`.`bb_article_main` ( 
 `id` INT(11) NOT NULL AUTO_INCREMENT , 
@@ -168,3 +175,5 @@ Posting Article view from Index
 	IV 	for India and Politics 		=> ip
 	V 	for Education and Training 	=> et
 	VI 	for World and Language 		=> wl
+
+

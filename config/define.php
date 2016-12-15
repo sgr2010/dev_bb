@@ -38,7 +38,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 // Define all TABLE name
 
 define('TBL_ARTICLE','bb_article_main');
-define('TBL_ARTICLE_TYPE','bb_articles_type');
+define('TBL_ARTICLE_TYPE','bb_article_type');
 define('TBL_ADMIN','bb_admin_user');
 
 

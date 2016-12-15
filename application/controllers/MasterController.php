@@ -22,7 +22,8 @@ class masterController extends Controller{
        
     }
 
-    public function master_article_type_new(){
+    public function master_article_type_new()
+    {
         $mode = " confirm";
 
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
@@ -79,6 +80,48 @@ class masterController extends Controller{
         $this->view->set( 'active_sub', "active" );
 
         return $this->view();
+
+    }
+
+    public function article_type_edit( $data ){
+        $mode = "confirm";
+
+        $res = $this->_model->get_articles_type_by_id( $data );
+        $menu = "Masters";
+        $menu_sub = "Article Types";
+        $page_header_sub_title = "Article type list";
+        $page_header_title = "Article Type";
+        
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){
+            $mode = $_POST['mode']; 
+        }
+
+        if( $mode == "edit" ){
+            $res = $this->_model->mdl_edit_article_type( $_POST );             
+            if( $res == true ){
+                header( 'location: ../master/master_article_type_view' );
+                exit;
+            }
+        }
+
+
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "master" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "view_article_type" );
+        $this->view->set( 'active_sub', "active" );
+
+        $this->view->set( 'data', $res );
+        return $this->view();
+
+        
+
 
     }
 

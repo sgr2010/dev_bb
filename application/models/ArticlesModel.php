@@ -20,7 +20,7 @@ class articlesModel extends Model{
 
     public function get_articles_type(){
 
-        $table = "bb_articles_type";
+        $table = TBL_ARTICLE_TYPE;
         $field = "*";
         $where = "DeleteFlag = 0";
         $result = $this->db->select( $field, $table, $where);

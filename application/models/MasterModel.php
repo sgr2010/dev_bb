@@ -1,13 +1,7 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of AdminloginModel
+ * Description of MasterModel
  *
  * @author SGR
  */
@@ -18,34 +12,39 @@ class masterModel extends Model{
     }
 
     
-   public function mdl_register_new_article_type( $value ){    
-        $data = array(
-            'ArticleTypeName'=>$value['article_tittle'],
-            'Describe'=>$value['article_type_describe'] 
-                  );
+  public function mdl_register_new_article_type( $value ){    
+    $data = array(
+        'ArticleTypeName'=>$value['article_tittle'],
+        'Description'=>$value['article_type_describe'],
+        'CreatedDate' => date("Y-m-d H:i:s"));
+    // Database Table name 
+    $table =TBL_ARTICLE_TYPE;
         
-        // Database Table name 
-        $table ="bb_articles_type";
-        
-        // after data insert return will be boolen Type True / False
-        $result = $this->db->insert($data, $table);     
+    // after data insert return will be boolen Type True / False
+    $result = $this->db->insert($data, $table);     
 
-       return $result;
+    return $result;
+  }
 
-   }
-
-   public function get_articles_type_all(){
-
-        $table = "bb_articles_type";
+    public function get_articles_type_all(){
+        $table = TBL_ARTICLE_TYPE;
         $field = "*";
         $where = "";
         $result = $this->db->select( $field, $table, $where);
         return $result;
     }
 
-    
+    public function get_articles_type_by_id( $data ){
+        $table = TBL_ARTICLE_TYPE;
 
+        $result = $this->db->query("SELECT * FROM ". $table ." WHERE ArticleTypeId='$data'");
+       
+        $raw = mysql_fetch_array($result);    
+        return $raw;
 
+    }
+
+  
 
 
 }
