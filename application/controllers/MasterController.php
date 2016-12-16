@@ -99,8 +99,7 @@ class masterController extends Controller{
         if( $mode == "edit" ){
             $res = $this->_model->mdl_edit_article_type( $_POST );             
             if( $res == true ){
-                header( 'location: ../master/master_article_type_view' );
-                exit;
+                $message = "";
             }
         }
 
