@@ -176,6 +176,27 @@ class artModel extends Model{
 
         return $result;
     }
+
+    // Get Related Article 4 records
+    public function get_articles_related_data( $tages= false )
+    {
+       //   $field = "*";
+       //  // $where = "WHERE NOT ArticleId='$id' AND `DeleteFlag` = 0 AND `ArticleStatus` = ";
+       //   $orderby = " ArticleId DESC ";
+       //  // $result = $this->db->select( $field, TBL_ARTICLE, $where, $orderby );
+       //   $where = "ArticleTag LIKE '%land%'";
+
+       //  //$field = "*";
+       //  //$where = "ArticleId = " . $id;
+       // // $result = $this->db->query( $field, TBL_ARTICLE , $where);
+       //  //$result = $this->db->select( "SELECT * FROM ". TBL_ARTICLE ." WHERE NOT ArticleId='$id' AND `DeleteFlag` = 0 AND `ArticleStatus` = 1 ORDER BY `ArticleId` DESC LIMIT 2 " );
+
+       //  $result = $this->db->select( $field, TBL_ARTICLE, ' `DeleteFlag` = 0 AND `ArticleStatus` = 2', $orderby , '2');
+       
+       // // $raw = mysql_fetch_array($result);
+
+       //  return $result;
+    }
     
 
     /**
