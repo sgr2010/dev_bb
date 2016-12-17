@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Description of MasterModel
  *
@@ -29,8 +30,24 @@ class masterModel extends Model{
     public function get_articles_type_all(){
         $table = TBL_ARTICLE_TYPE;
         $field = "*";
-        $where = "";
+        $where = "DeleteFlag = 0";
         $result = $this->db->select( $field, $table, $where);
+        return $result;
+    }
+
+    /**
+    Article Type Delete
+    @input id
+    @output True/ False
+    **/
+    public function del_article_type( $id )
+    {
+         $data = array(
+            'DeleteFlag'=>1
+        );
+        
+        $where = "ArticleTypeId =".$id ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE_TYPE, $where );
         return $result;
     }
 
@@ -42,6 +59,19 @@ class masterModel extends Model{
         $raw = mysql_fetch_array($result);    
         return $raw;
 
+    }
+
+    public function mdl_edit_article_type( $value ){
+
+        $data = array(
+            'ArticleTypeName'=>$value['ArticleTypeName'],
+            'Description'=>$value['Description']            
+            
+        );
+        
+        $where = "ArticleTypeId =".$value['id'] ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE_TYPE, $where );
+        return $result;
     }
 
   

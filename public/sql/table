@@ -151,6 +151,18 @@ CREATE TABLE `deb_bb`.`bb_article_img` (
 PRIMARY KEY (`ImgId`)
 ) ENGINE = InnoDB;
 
+// Article Type Table
+CREATE TABLE `deb_bb`.`bb_author` ( 
+`AuthorId` INT NOT NULL AUTO_INCREMENT ,
+`AuthorName` VARCHAR(56) NOT NULL , 
+`AuthorAge` INT(11) NOT NULL , 
+`Description` VARCHAR(56) NOT NULL , 
+`AuthorStatus` INT(1) NOT NULL DEFAULT '0' , 
+`DeleteFlag` INT NOT NULL , 
+`CreatedDate` DATETIME NULL ,
+PRIMARY KEY (`AuthorId`)
+) ENGINE = InnoDB;
+
 // Menu For Front :
 
 1 | Tourist and Tourism 
@@ -179,3 +191,8 @@ Posting Article view from Index
 	VI 	for World and Language 		=> wl
 
 
+
+17/12/2016
+1. Article type Delete Option
+2. Article type Status Option set 
+3. 

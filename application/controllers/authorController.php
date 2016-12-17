@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of Master Controller
+ * Description of authorController
  *
  * @author SGR Infotech
  */
-class masterController extends Controller{
+class authorController extends Controller{
     //put your code here  
     
     protected function init(){    
@@ -21,33 +21,32 @@ class masterController extends Controller{
         // login check
         if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) )
         {
-            //header( 'location: /login/?r=' . urlencode( $_SERVER['REQUEST_URI'] ) );
             $loca = MODE."/adminlogin/login/?r=". urlencode( $_SERVER['REQUEST_URI'] );     
             header("Location:  $loca");
             exit;
         }       
     }
 
-    public function master_article_type_new()
+    public function register()
     {
-        $mode = " confirm";
+        $mode = "normal";
 
         if($_SERVER["REQUEST_METHOD"] == 'POST'){
             $mode = $_POST['mode']; 
         }
 
         if( $mode == "new" ){
-            $res = $this->_model->mdl_register_new_article_type( $_POST );             
+            $res = $this->_model->mdl_register_new_author( $_POST );             
             if( $res == true ){
-                header( 'location: ../master/master_article_type_view' );
+                header( 'location: ../author/author_view' );
                 exit;
             }
         }
 
-        $menu = "Masters";
-        $menu_sub = "Article Types";
-        $page_header_sub_title = "New Article Type Register";
-        $page_header_title = "Article Type";
+        $menu = "Author";
+        $menu_sub = "Author Register";
+        $page_header_sub_title = "New Author Register";
+        $page_header_title = "Author";
         
         $this->view->set( 'menu', $menu );
         $this->view->set( 'menu_sub', $menu_sub );
@@ -58,15 +57,16 @@ class masterController extends Controller{
         $this->view->set( 'current', "master" );
         $this->view->set( 'active', "active open" );
         // left menu active 
-        $this->view->set( 'current_sub', "vat" );
+        $this->view->set( 'current_sub', "author" );
         $this->view->set( 'active_sub', "active" );
 
         return $this->view();
     }
 
-    public function master_article_type_view( )
+    public function author_view()
     {
-        $mode = "normal";               
+        $mode = "normal";   
+        //$res = null;            
         
         if($_SERVER["REQUEST_METHOD"] == 'POST'){            
             $mode = $_POST['mode'];            
@@ -74,14 +74,14 @@ class masterController extends Controller{
 
         if( $mode == "delete")
         {
-            $result= $this->_model->del_article_type( $_POST['id']);
+            $result= $this->_model->del_author( $_POST['id']);
         }
 
-        $res = $this->_model->get_articles_type_all();
+        $res = $this->_model->get_author_all();
 
         $this->view->set('articleTypes',$res);
-        $menu = "Masters";
-        $menu_sub = "Article Types";
+        $menu = "Author";
+        $menu_sub = "Author ";
         $page_header_sub_title = "Article type list";
         $page_header_title = "Article Type";
         $this->view->set( 'menu', $menu );
@@ -93,7 +93,7 @@ class masterController extends Controller{
         $this->view->set( 'current', "master" );
         $this->view->set( 'active', "active open" );
         // left menu active 
-         $this->view->set( 'current_sub', "vat" );
+        $this->view->set( 'current_sub', "author" );
         $this->view->set( 'active_sub', "active" );
 
         return $this->view();

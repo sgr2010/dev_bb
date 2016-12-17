@@ -54,18 +54,18 @@ $this->layout = '~/views/shared/_default.php';
                             </label>
                         </td>   
                         <td>
-                            <a href="#"><?php echo $value['ArticleTypeId'] ?></a>
+                            <a href="#"><?php echo $value['AuthorId'] ?></a>
                         </td>
                         <td>
-                            <a href="javascript:getEdit('master','article_type_edit','<?php echo $value['ArticleTypeId'] ?>');"><?php echo $value['ArticleTypeName'] ?></a>
+                            <a href="javascript:getEdit('master','article_type_edit','<?php echo $value['AuthorId'] ?>');"><?php echo $value['AuthorName'] ?></a>
                         </td>
                         <td><?php echo $value['Description'] ?></td>
                         <td for="status">
                         <?php 
-                            if( $value["TypeStatus"] == 0 ) echo "<i class='ace-icon fa fa-circle blue'></i>&nbsp<span class='blue'>Not Active</span>";
-                            if( $value["TypeStatus"] == 1 ) echo "<i class='ace-icon fa fa-circle green'></i>&nbsp<span class='green'>Active</span>";
-                            if( $value["TypeStatus"] == 2 ) echo "<i class='ace-icon fa fa-circle red'></i>&nbsp<span class='red'>Hold</span>";
-                            if( $value["TypeStatus"] == 3 ) echo "<i class='ace-icon fa fa-circle grey'></i>&nbsp<span class='grey'>Blocked</span>";
+                            if( $value["AuthorStatus"] == 0 ) echo "<i class='ace-icon fa fa-circle blue'></i>&nbsp<span class='blue'>Not Active</span>";
+                            if( $value["AuthorStatus"] == 1 ) echo "<i class='ace-icon fa fa-circle green'></i>&nbsp<span class='green'>Active</span>";
+                            if( $value["AuthorStatus"] == 2 ) echo "<i class='ace-icon fa fa-circle red'></i>&nbsp<span class='red'>Hold</span>";
+                            if( $value["AuthorStatus"] == 3 ) echo "<i class='ace-icon fa fa-circle grey'></i>&nbsp<span class='grey'>Blocked</span>";
                         ?>
                          <div class="btn-group">
                                 <button class="btn btn-sm btn-white">Status change</button>
@@ -73,10 +73,10 @@ $this->layout = '~/views/shared/_default.php';
                                     <i class="ace-icon fa fa-angle-down icon-only"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-yellow">
-                                    <li><a href="#" onclick="atricleStatus( '1' , '<?php echo $article_single["ArticleId"]; ?>')" >Active</a></li>
-                                    <li><a href="#" onclick="atricleStatus( '2', '<?php echo $article_single["ArticleId"]; ?>')" >Hold</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '1' , '<?php echo $article_single["AuthorId"]; ?>')" >Active</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '2', '<?php echo $article_single["AuthorId"]; ?>')" >Hold</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#" onclick="atricleStatus( '3', '<?php echo $article_single["ArticleId"]; ?>')">Blocked</a></li>
+                                    <li><a href="#" onclick="atricleStatus( '3', '<?php echo $article_single["AuthorId"]; ?>')">Blocked</a></li>
                                 </ul>
                             </div><!-- /.btn-group -->
                         </td>                                               
@@ -88,7 +88,7 @@ $this->layout = '~/views/shared/_default.php';
                                 <a class="green" href="#">
                                     <i class="ace-icon fa fa-pencil bigger-130"></i>
                                 </a>                
-                                <a class="red" href="#" data-record-id="<?php echo $value['ArticleTypeId'];  ?>" data-record-title="Article Type #<?php echo $value['ArticleTypeId'];  ?>" data-toggle="modal" data-target="#confirm-delete">
+                                <a class="red" href="#" data-record-id="<?php echo $value['ArticleId'];  ?>" data-record-title="Article Type #<?php echo $value['ArticleId'];  ?>" data-toggle="modal" data-target="#confirm-delete">
                                     <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                 </a>
                             </div>                                                    

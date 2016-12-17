@@ -34,6 +34,26 @@ class articlesModel extends Model{
         //var_dump($result);
         return $result;
     }
+
+
+    /**
+    Article Type Delete
+    @input id
+    @output True/ False
+    **/
+    public function del_article( $id )
+    {
+         $data = array(
+            'DeleteFlag'=>1,
+            'ArticleStatus'=>3
+        );
+        
+        $where = "ArticleId =".$id ; // article id
+        $result = $this->db->update( $data, TBL_ARTICLE, $where );
+        return $result;
+    }
+
+
     
     
 
@@ -112,13 +132,25 @@ class articlesModel extends Model{
         return $result;
     }
 
-    public function mdl_get_article_all(){
-        
+    public function mdl_get_article_all(){        
         $field = "*";
         $where = "DeleteFlag = 0";
         $orderby = " ArticleId DESC ";
         $result = $this->db->select( $field, TBL_ARTICLE, $where, $orderby );
-        //var_dump($result);
+        return $result;
+    }
+
+    /**
+    Deleted Article GET Model
+    @INPUT
+    @OUTPUT
+    **/
+    public function mdl_get_deleted_article_all()
+    {
+        $field = "*";
+        $where = "DeleteFlag = 1";
+        $orderby = " ArticleId DESC ";
+        $result = $this->db->select( $field, TBL_ARTICLE, $where, $orderby );
         return $result;
 
     }
