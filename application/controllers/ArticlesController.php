@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of loginController
+ * Description of ArticleController
  *
  * @author SGR Infotech
  */
@@ -18,7 +18,14 @@ class articlesController extends Controller{
     
     protected function init(){    
         $this->db = new MySqlDataAdapter($this->cfg['db']['hostname'], $this->cfg['db']['username'], 
-        $this->cfg['db']['password'], $this->cfg['db']['database']);        
+        $this->cfg['db']['password'], $this->cfg['db']['database']);  
+
+        if( ( $_SESSION['loggedin'] == null ) and ( $_SESSION['username'] == false ) )
+        {
+            $loca = MODE."/adminlogin/login/?r=". urlencode( $_SERVER['REQUEST_URI'] );     
+            header("Location:  $loca");
+            exit;
+        }   
        
     }
     /**
@@ -188,12 +195,20 @@ class articlesController extends Controller{
     }
 
 
-    public function article_view(){
-        if( $_SESSION['loggedin'] == null){         
-            header("Location:  adminlogin/login");
-            exit;
+    public function article_view()
+    {
+        $mode = "normal";               
+        
+        if($_SERVER["REQUEST_METHOD"] == 'POST'){            
+            $mode = $_POST['mode'];            
         }
 
+        if( $mode == "delete")
+        {
+            $result= $this->_model->del_article( $_POST['id']);
+        }
+        
+        
         $getArticleType = $this->_model->mdl_get_article_type_all();
         $this->view->set( 'article_type_all', $getArticleType );
      
@@ -349,13 +364,42 @@ class articlesController extends Controller{
                 } 
             }
         }
-         
-
         return;
-
     }
 
+    /**
+    Deleted Articles 
+    @INPUT
+    @OUTPUT
+    **/
+    public function deleted_articles()
+    {
+        $getArticleType = $this->_model->mdl_get_article_type_all();
+        $this->view->set( 'article_type_all', $getArticleType );
+     
+        
+        $res = $this->_model->mdl_get_deleted_article_all(); // get all article             
+        $this->view->set('article_all',$res);
 
-   
+        
+        $menu = "Article";
+        $menu_sub = "Deleted Article";
+        $page_header_sub_title = "Article list";
+        $page_header_title = "Deleted Article";
+        $this->view->set( 'menu', $menu );
+        $this->view->set( 'menu_sub', $menu_sub );
+        $this->view->set( 'page_header_title', $page_header_title );
+        $this->view->set( 'page_header_sub_title', $page_header_sub_title );
+
+        // left menu active 
+        $this->view->set( 'current', "article" );
+        $this->view->set( 'active', "active open" );
+        // left menu active 
+        $this->view->set( 'current_sub', "vda" );
+        $this->view->set( 'active_sub', "active" );
+
+        return $this->view();
+
+    }
     
 }
